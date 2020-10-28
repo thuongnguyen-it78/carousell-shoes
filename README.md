@@ -1,7 +1,5 @@
 #### The name of this project is Cararousell 
 #### The subject of this project is selling shoes
-##### Member
-=======
 #### Member
 ###### 17130239 - Nguyễn Văn Thường
 ###### 17130099 - Trần Minh Khánh
