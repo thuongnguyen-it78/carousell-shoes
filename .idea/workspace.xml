@@ -7,7 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f0213c7-2317-4c11-8169-2f158e9c60ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/thuongnguyen/it78/models/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -43,10 +45,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ConnectDB.java">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/ConnectDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+            <state relative-caret-position="88">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/Categories.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <folding>
+                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#625#626#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#769#770#0" expanded="true" />
+                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#859#860#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/Accounts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -71,6 +103,7 @@
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ConnectDB.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/models/Categories.java" />
       </list>
     </option>
   </component>
@@ -111,6 +144,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="it78" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarousellShoes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="it78" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarousellShoes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="it78" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -145,11 +192,11 @@
   </component>
   <component name="RunManager" selected="Application.ConnectDB">
     <configuration name="ConnectDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thuongnguyen.it78.controllers.ConnectDB" />
+      <option name="MAIN_CLASS_NAME" value="thuongnguyen.it78.models.ConnectDB" />
       <module name="CarousellShoes" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thuongnguyen.it78.controllers.*" />
+          <option name="PATTERN" value="thuongnguyen.it78.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -247,12 +294,12 @@
       <option name="presentableId" value="Default" />
       <updated>1603879440373</updated>
       <workItem from="1603879444743" duration="2184000" />
-      <workItem from="1603884888419" duration="1785000" />
+      <workItem from="1603884888419" duration="2303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3969000" />
+    <option name="totallyTimeSpent" value="4487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -311,13 +358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ConnectDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -325,6 +365,39 @@
             <caret line="5" selection-start-line="5" selection-end-line="5" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/ConnectDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/Accounts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/Categories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
