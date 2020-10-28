@@ -1,4 +1,4 @@
-package thuongnguyen.it78.controllers;
+package thuongnguyen.it78.models;
 
 import java.sql.*;
 
