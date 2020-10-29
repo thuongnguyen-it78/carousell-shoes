@@ -1,4 +1,4 @@
-package thuongnguyen.it78.models;
+package thuongnguyen.it78.daos;
 
 import java.sql.*;
 
@@ -22,15 +22,15 @@ public class ConnectDB {
         }
     }
 
-    public void excuteSQL(String query) throws SQLException {
+    public static void excuteSQL(String query) throws SQLException {
         Connection connect = getConnection();
         Statement stmt =  connect.createStatement();
         stmt.execute(query);
     }
-    public ResultSet selectData(String quey) throws SQLException {
+    public static ResultSet selectData(String query) throws SQLException {
         Connection connect = getConnection();
         Statement stmt = connect.createStatement();
-        ResultSet rs = stmt.executeQuery(quey);
+        ResultSet rs = stmt.executeQuery(query);
         return rs;
     }
 
