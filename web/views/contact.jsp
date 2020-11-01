@@ -23,7 +23,7 @@
     />
 
     <!-- Icont  -->
-    <link rel="icon" href="/resources/img/site/favicon.ico">
+    <link rel="shortcut icon" href="/resources/img/site/favicon.ico?" type="image/x-icon">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css" type="text/css">

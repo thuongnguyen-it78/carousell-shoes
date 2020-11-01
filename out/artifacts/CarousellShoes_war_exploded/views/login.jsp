@@ -1,3 +1,5 @@
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Map" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -143,9 +145,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form class="login-form" autocomplete="off" action="#" id = "form-login">
+                    <form class="login-form" autocomplete="off" action="/auth/login" id = "form-login" method="post">
+                       <%
+                           Map<String, String> messages = null;
+                           if (request.getAttribute("messages") != null) {
+                            messages = (HashMap)request.getAttribute("messages");
+                        }
+                       %>
+                        <%
+                            if(messages == null) {}
+                                else {
+                        %>
+                            <% for (String i : messages.keySet()) { %>
+                            <div class="alert alert-danger" role="alert">
+                                <%= messages.get(i)%>
+                            </div>
+                            <% } %>
+
+                        <%
+                            }
+                        %>
+
                         <div class="form-group">
-                            <input type="email" name="email" class = "form-control" id="email" placeholder="Email"/>
+                            <input type="email" name="email" class = "form-control" id="email" placeholder="Email"
+                                    <%
+                                        String email = "";
+                                        if (request.getAttribute("email") != null) {
+                                            email = (String) request.getAttribute("email");
+                                        }
+                                    %>
+
+                                    value="<%= email%>"
+                            />
                             <span class="form-message"></span>
                         </div>
                         <div class="input-icon form-group">

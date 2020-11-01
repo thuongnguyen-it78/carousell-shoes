@@ -51,19 +51,6 @@
 
 
 
-
-
-
-    <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <jsp-file>/views/login.jsp</jsp-file>
-    </servlet>
-    <!--mapping-->
-    <servlet-mapping>
-        <servlet-name>LoginServlet</servlet-name>
-        <url-pattern>/login</url-pattern>
-    </servlet-mapping>
-
     <servlet>
         <servlet-name>SignupServlet</servlet-name>
         <jsp-file>/views/signup.jsp</jsp-file>

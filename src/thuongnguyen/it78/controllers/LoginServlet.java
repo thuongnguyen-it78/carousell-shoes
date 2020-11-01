@@ -16,12 +16,12 @@ import java.util.Map;
 @WebServlet("/auth/login")
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        String username = req.getParameter("username");
+        String email = req.getParameter("email");
         String password = req.getParameter("password");
 
         Map<String, String> messages = new HashMap<>();
 
-        if (username == null || username.isEmpty()) {
+        if (email == null || email.isEmpty()) {
             messages.put("username", "Please enter username");
         }
 
@@ -30,24 +30,25 @@ public class LoginServlet extends HttpServlet {
         }
 
         if (messages.isEmpty()) {
-            Account account = AccountDAO.getAccount(username, password);
+            Account account = AccountDAO.getAccount(email, password);
 
             if (account != null) {
-                req.getSession().setAttribute("user", account);
-                res.sendRedirect("/home");
+                req.getSession().setAttribute("account", account);
+                res.sendRedirect("/");
                 return;
             } else {
-                messages.put("login", "Unknown login, please try again");
+                messages.put("login", "Tài khoản hoặc mật khẩu không đúng !");
             }
         }
 
         req.setAttribute("messages", messages);
-        req.getRequestDispatcher("/login.jsp").forward(req, res);
+        req.setAttribute("email", email);
+        req.getRequestDispatcher("/views/login.jsp").forward(req, res);
 
 
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-//        req.getRequestDispatcher("/views/index.jsp").forward(req, res);
+        req.getRequestDispatcher("/views/login.jsp").forward(req, res);
     }
 }
