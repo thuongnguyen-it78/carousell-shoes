@@ -1,3 +1,4 @@
+<%@ page import="thuongnguyen.it78.models.Account" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- Page Preloder -->
 <div id="preloder">
@@ -43,6 +44,14 @@
                 </div>
                 <div class="col-lg-7 col-md-5">
                     <div class="header__top__right">
+                    <%
+                        Account account1 = (Account) session.getAttribute("account");
+                    %>
+
+                    <%
+                        if(account1 == null) {
+                    %>
+
                         <div class="header__top__links">
                             <a href="/contact.html"><img src="/resources/img/optimization/icon_tim_cua_hang.svg" alt=""> Tìm cửa hàng</a>
                             <a href="/contact.html"><img src="/resources/img/optimization/icon_heart_header.svg" alt=""> Yêu thích</a>
@@ -50,14 +59,23 @@
                             <a href="/signup.html"><img src="/resources/img/optimization/icon_dang_nhap.svg" alt=""> Đăng kí</a>
                             <!-- <a href="#"><img src="/resources/img/optimization/icon_gio_hang.svg" alt=""> Giỏ hàng <span>(0)</span></a> -->
                         </div>
-                        <!-- <div class="header__top__hover">
-                            <img src="/img/product-sale.png" alt=""> <span>Thường Nguyễn</span>
+    <%
+        } else {
+    %>
+                         <div class="header__top__hover">
+                            <img src="/resources/img/site/default.jpg" alt=""> <span><%= account1.getAccountEmail()%></span>
                             <ul>
+
                                 <li>Thông tin tài khoản</li>
                                 <li>Thông tin tài khoản</li>
                                 <li>Thông tin tài khoản</li>
                             </ul>
-                        </div> -->
+                        </div>
+
+
+                    <%
+                        }
+                    %>
                     </div>
                 </div>
             </div>

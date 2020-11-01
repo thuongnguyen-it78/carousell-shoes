@@ -142,12 +142,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form class="signup-form login-form" autocomplete="off" action="#" id="form-1" method="get">
+                    <form class="signup-form login-form" autocomplete="off" action="/auth/signup" id="form-1" method="post">
+                        <%
+                            String errorEmail = "";
+                            if (request.getAttribute("errorEmail") != null) {
+                                errorEmail = (String) request.getAttribute("errorEmail");
+
+                        %>
+
+                        <div class="alert alert-danger" role="alert">
+                            <%= errorEmail%>
+                        </div>
+                        <%
+                            }
+                        %>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="checkout__input form-group">
                                     <p>Họ tên<span>*</span></p>
-                                    <input type="text" placeholder="Thường Nguyễn" id="fullname" class="form-control" name="fullname">
+                                    <input type="text" placeholder="Thường Nguyễn" id="fullname" class="form-control" name="fullname"
+
+
+                                    >
                                     <span class="form-message"></span>
                                 </div>
                             </div>
@@ -180,9 +196,9 @@
                             <p>Giới tính<span>*</span></p>
                             <div class = "gender">
                                 <div>
-                            <input type="radio" id="male" value="male" class="radio-input" name="gender"/>
+                            <input type="radio" id="male" value=0 class="radio-input" name="gender"/>
                             <label for="male" class="radio-label"></label><span>Nam</span>
-                            <input type="radio" id="fmale" value="fmale" class="radio-input" name="gender"/>
+                            <input type="radio" id="fmale" value=1 class="radio-input" name="gender"/>
                             <label for="fmale" class="radio-label"></label><span>Nữ</span>
                             <span class="form-message"></span>
                         </div>
@@ -190,10 +206,10 @@
                         </div>
                         <div class="checkout__input form-group">
                             <p>Địa chỉ<span>*</span></p>
-                            <input type="text" placeholder="6 QL1A, Khu Phó 1, Dĩ An, Thành phố Hồ Chí Minh" class="checkout__input__add form-control" id="address" id="address">
+                            <input type="text" placeholder="6 QL1A, Khu Phó 1, Dĩ An, Thành phố Hồ Chí Minh" class="checkout__input__add form-control" id="address" id="address" name = "address">
                             <span class="form-message"></span>
                         </div>
-                        <button class ="signup-button">ĐĂNG KÍ</button> 
+                        <button type = "submit" class ="signup-button">ĐĂNG KÍ</button>
                     </form>
                 </div>
             </div>

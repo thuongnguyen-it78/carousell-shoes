@@ -1,5 +1,8 @@
 package thuongnguyen.it78.controllers;
 
+import thuongnguyen.it78.daos.AccountDAO;
+import thuongnguyen.it78.models.Account;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,13 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("auth/signup")
-public class SignUp extends HttpServlet {
+@WebServlet("/me/logout")
+public class LogoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
+        req.getSession().invalidate();
+        res.sendRedirect("/");
     }
 }

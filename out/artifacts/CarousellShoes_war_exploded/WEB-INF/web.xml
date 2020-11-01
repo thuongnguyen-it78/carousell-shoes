@@ -51,16 +51,6 @@
 
 
 
-    <servlet>
-        <servlet-name>SignupServlet</servlet-name>
-        <jsp-file>/views/signup.jsp</jsp-file>
-    </servlet>
-    <!--mapping-->
-    <servlet-mapping>
-        <servlet-name>SignupServlet</servlet-name>
-        <url-pattern>/signup</url-pattern>
-    </servlet-mapping>
-
 
 
 </web-app>
