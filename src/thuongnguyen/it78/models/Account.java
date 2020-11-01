@@ -23,6 +23,15 @@ public class Account {
         this.accountRole = accountRole;
     }
 
+    public Account(String accountEmail, String accountPassword, String accountFullname, String accountNumber, int accountGender, String accountAddress) {
+        this.accountEmail = accountEmail;
+        this.accountPassword = accountPassword;
+        this.accountFullname = accountFullname;
+        this.accountNumber = accountNumber;
+        this.accountGender = accountGender;
+        this.accountAddress = accountAddress;
+    }
+
     public int getAccountID() {
         return accountID;
     }

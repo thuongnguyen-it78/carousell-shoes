@@ -2,7 +2,7 @@ package thuongnguyen.it78.daos;
 
 public interface ObjectDAO {
 
-    default boolean add(Object obj) {
+    default boolean create(Object obj) {
         return false;
     }
     default boolean update(Object obj) {

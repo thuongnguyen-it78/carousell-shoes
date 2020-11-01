@@ -9,7 +9,7 @@ public class ConnectDB {
         String driver = "com.mysql.jdbc.Driver";
         String DB_username = "root";
         String DB_password = "";
-        String DB_URL = "jdbc:mysql://localhost:3306/shoes";
+        String DB_URL = "jdbc:mysql://127.0.0.1:3306/shoes";
         Connection connect = null;
 
         try {
@@ -24,13 +24,13 @@ public class ConnectDB {
 
     public static void excuteSQL(String query) throws SQLException {
         Connection connect = getConnection();
-        Statement stmt =  connect.createStatement();
-        stmt.execute(query);
+        PreparedStatement pstmt =  connect.prepareStatement(query);
+        pstmt.executeUpdate();
     }
     public static ResultSet selectData(String query) throws SQLException {
         Connection connect = getConnection();
-        Statement stmt = connect.createStatement();
-        ResultSet rs = stmt.executeQuery(query);
+        PreparedStatement pstmt = connect.prepareStatement(query);
+        ResultSet rs = pstmt.executeQuery();
         return rs;
     }
 
