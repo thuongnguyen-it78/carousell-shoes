@@ -7,14 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/me/logout")
-public class LogoutServlet extends HttpServlet {
+@WebServlet("/product")
+public class ProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        req.getSession().invalidate();
-        res.sendRedirect("/");
+        req.getRequestDispatcher("/views/shop.jsp").forward(req, res);
     }
 }
