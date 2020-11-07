@@ -4,18 +4,18 @@ public class Account {
     private int accountID;
     private String accountEmail;
     private String accountPassword;
-    private String accountFullname;
+    private String accountFullName;
     private String accountNumber;
     private int accountGender;
     private String accountAddress;
     private String accountAvatar;
     private int accountRole;
 
-    public Account(int accountID, String accountEmail, String accountPassword, String accountFullname, String accountNumber, int accountGender, String accountAddress, String accountAvatar, int accountRole) {
+    public Account(int accountID, String accountEmail, String accountPassword, String accountFullName, String accountNumber, int accountGender, String accountAddress, String accountAvatar, int accountRole) {
         this.accountID = accountID;
         this.accountEmail = accountEmail;
         this.accountPassword = accountPassword;
-        this.accountFullname = accountFullname;
+        this.accountFullName = accountFullName;
         this.accountNumber = accountNumber;
         this.accountGender = accountGender;
         this.accountAddress = accountAddress;
@@ -23,10 +23,10 @@ public class Account {
         this.accountRole = accountRole;
     }
 
-    public Account(String accountEmail, String accountPassword, String accountFullname, String accountNumber, int accountGender, String accountAddress) {
+    public Account(String accountEmail, String accountPassword, String accountFullName, String accountNumber, int accountGender, String accountAddress) {
         this.accountEmail = accountEmail;
         this.accountPassword = accountPassword;
-        this.accountFullname = accountFullname;
+        this.accountFullName = accountFullName;
         this.accountNumber = accountNumber;
         this.accountGender = accountGender;
         this.accountAddress = accountAddress;
@@ -56,12 +56,12 @@ public class Account {
         this.accountPassword = accountPassword;
     }
 
-    public String getAccountFullname() {
-        return accountFullname;
+    public String getAccountFullName() {
+        return accountFullName;
     }
 
-    public void setAccountFullname(String accountFullname) {
-        this.accountFullname = accountFullname;
+    public void setAccountFullName(String accountFullname) {
+        this.accountFullName = accountFullname;
     }
 
     public String getAccountNumber() {
@@ -110,7 +110,7 @@ public class Account {
                 "accountID=" + accountID +
                 ", accountEmail='" + accountEmail + '\'' +
                 ", accountPassword='" + accountPassword + '\'' +
-                ", accountFullname='" + accountFullname + '\'' +
+                ", accountFullName='" + accountFullName + '\'' +
                 ", accountNumber='" + accountNumber + '\'' +
                 ", accountGender=" + accountGender +
                 ", accountAddress='" + accountAddress + '\'' +

@@ -2,6 +2,8 @@
 <%@ page import="java.util.Map" %>
 <%@ page import="thuongnguyen.it78.models.Shoes" %>
 <%@ page import="java.util.HashMap" %>
+<%@ page import="thuongnguyen.it78.configs.LibraryMethod" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -721,7 +723,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><%=shoes.getShoesName()%></h6>
+                                    <h6><%= LibraryMethod.capFirstLetter(shoes.getShoesName()) %></h6>
                                     <a href="/products/<%=shoes.getShoesID()%>" class="add-cart">+ Add To Cart</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
@@ -730,7 +732,7 @@
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                     </div>
-                                    <h5><%=shoes.getShoesPrice() + " VND"%></h5>
+                                    <h5><%=LibraryMethod.priceToString(shoes.getShoesPrice())%></h5>
                                     <div class="product__color__select">
                                         <label for="pc-37">
                                             <input type="radio" id="pc-37">

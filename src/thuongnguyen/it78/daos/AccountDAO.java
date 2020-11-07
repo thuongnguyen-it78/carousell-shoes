@@ -154,7 +154,7 @@ public class AccountDAO implements ObjectDAO{
             PreparedStatement pstmt = connect.prepareStatement(query);
             pstmt.setString(1, account.getAccountEmail());
             pstmt.setString(2, account.getAccountPassword());
-            pstmt.setString(3, account.getAccountFullname());
+            pstmt.setString(3, account.getAccountFullName());
             pstmt.setString(4, account.getAccountNumber());
             pstmt.setInt(5, account.getAccountGender());
             pstmt.setString(6, account.getAccountAddress());
@@ -189,7 +189,7 @@ public class AccountDAO implements ObjectDAO{
         Connection connect = ConnectDB.getConnection();
         try {
             PreparedStatement pstmt = connect.prepareStatement(query);
-            pstmt.setString(1, account.getAccountFullname());
+            pstmt.setString(1, account.getAccountFullName());
             pstmt.setString(2, account.getAccountPassword());
             pstmt.setString(3, account.getAccountAddress());
             pstmt.setInt(4, account.getAccountGender());
