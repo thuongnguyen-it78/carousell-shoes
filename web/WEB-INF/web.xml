@@ -3,12 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-
+<!--SET STATIC FILE BEGIN-->
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/resources/*</url-pattern>
     </servlet-mapping>
+<!--SET STATIC FILE END-->
 
+<!--SET PATH VIEWS BEGIN-->
     <servlet>
         <servlet-name>JSPServlet</servlet-name>
         <jsp-file>/views/*</jsp-file>
@@ -18,17 +20,10 @@
         <servlet-name>JSPServlet</servlet-name>
         <url-pattern>/views</url-pattern>
     </servlet-mapping>
+<!--SET PATH VIEWS END-->
 
-    <servlet>
-        <servlet-name>IndexServlet</servlet-name>
-        <jsp-file>/views/index.jsp</jsp-file>
-    </servlet>
-    <!--mapping-->
-    <servlet-mapping>
-        <servlet-name>IndexServlet</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
 
+<!--STATIC SERVLET BEGIN-->
     <servlet>
         <servlet-name>ContactServlet</servlet-name>
         <jsp-file>/views/contact.jsp</jsp-file>
@@ -36,7 +31,7 @@
     <!--mapping-->
     <servlet-mapping>
         <servlet-name>ContactServlet</servlet-name>
-        <url-pattern>/contact</url-pattern>
+        <url-pattern>/contact-us</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -46,10 +41,9 @@
     <!--mapping-->
     <servlet-mapping>
         <servlet-name>AboutServlet</servlet-name>
-        <url-pattern>/about</url-pattern>
+        <url-pattern>/about-us</url-pattern>
     </servlet-mapping>
-
-
+<!--STATIC SERVLET END-->
 
 
 

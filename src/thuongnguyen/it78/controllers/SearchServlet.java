@@ -7,13 +7,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/product-list")
-public class ProductServlet extends HttpServlet {
+@WebServlet("/search-result")
+public class SearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        req.getRequestDispatcher("/views/shop.jsp").forward(req, res);
+        String name = req.getPathInfo().substring(1);
+        System.out.println(name);
     }
 }
+
