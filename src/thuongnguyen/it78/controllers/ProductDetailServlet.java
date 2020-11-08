@@ -14,6 +14,6 @@ public class ProductDetailServlet  extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        req.getRequestDispatcher("/views/shop.jsp").forward(req, res);
+        req.getRequestDispatcher("/views/shop-details.jsp").forward(req, res);
     }
 }

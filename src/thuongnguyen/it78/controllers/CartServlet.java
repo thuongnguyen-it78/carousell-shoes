@@ -14,7 +14,6 @@ public class CartServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        req.getSession().invalidate();
-        res.sendRedirect("/");
+        req.getRequestDispatcher("/views/shopping-cart.jsp").forward(req, res);
     }
 }

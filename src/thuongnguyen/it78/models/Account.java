@@ -32,6 +32,14 @@ public class Account {
         this.accountAddress = accountAddress;
     }
 
+    public Account(int accountID, String accountFullName, String accountNumber, int accountGender, String accountAddress) {
+        this.accountID = accountID;
+        this.accountFullName = accountFullName;
+        this.accountNumber = accountNumber;
+        this.accountGender = accountGender;
+        this.accountAddress = accountAddress;
+    }
+
     public int getAccountID() {
         return accountID;
     }

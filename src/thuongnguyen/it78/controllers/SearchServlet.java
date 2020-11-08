@@ -14,8 +14,7 @@ public class SearchServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        String name = req.getPathInfo().substring(1);
-        System.out.println(name);
+
     }
 }
 

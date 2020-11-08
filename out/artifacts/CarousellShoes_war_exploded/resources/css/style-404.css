@@ -6,7 +6,7 @@ body{
     background-image: linear-gradient(125deg,#a96121,#b8e994);
 }
 
-.container{
+.container1{
   width: 100%;
   position: absolute;
   top: 50%;
@@ -15,17 +15,17 @@ body{
   color: #343434
 }
 
-.container h1{
+.container1 h1{
   font-size: 160px;
   margin: 0;
   font-weight: 900;
   letter-spacing: 20px;
-  background: url('/img/bg.jpg') center no-repeat;
+  background: url('/resources/img/site/404.jpg') center no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
-.container a{
+.container1 a{
   text-decoration: none;
   background: #e55039aa;
   color: #fff;
@@ -37,6 +37,6 @@ body{
   transition: 0.4s;
 }
 
-.container a:hover{
+.container1 a:hover{
   background: #e55039;
 }

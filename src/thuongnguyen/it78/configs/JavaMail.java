@@ -10,7 +10,7 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class JavaMail {
-    public static void send(String to, String subject, String text) {
+    public static boolean send(String to, String subject, String text) {
 
         // Mention the Sender's email address
         String from = "carousell.ltw.nhom09@gmail.com";
@@ -56,9 +56,11 @@ public class JavaMail {
 
             // Send message
             Transport.send(message);
+            return true;
         } catch (MessagingException mex) {
             mex.printStackTrace();
         }
+        return false;
 
     }
 

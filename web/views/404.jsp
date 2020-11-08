@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Male_Fashion Template">
     <meta name="keywords" content="thuongnguyen.it78 17130239 17130299 17130247">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="thuongnguyen.it78 17130239 17130299 17130247">
@@ -23,7 +22,9 @@
     />
 
     <!-- Icont  -->
-    <link rel="icon" href="/resources/img/site/favicon.ico">
+    <link rel="icon" href="/resources/img/site/favicon.ico" type="">
+    <!-- <link rel="shortcut icon" href="/resources/img/site/favicon.ico?" type="image/x-icon"> -->
+
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css" type="text/css">
@@ -34,6 +35,8 @@
     <link rel="stylesheet" href="/resources/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/resources/css/style-404.css" type="text/css">
+
 </head>
 <body>  
     <!-- Fixed -->
@@ -45,7 +48,7 @@
         <div class="loader"></div>
     </div>
 
-    <div class="container">
+    <div class="container1">
         <h2>Oops! Page not found.</h2>
         <h1>404</h1>
         <p>We can't find the page you're looking for.</p>

@@ -24,13 +24,16 @@ public class ConnectDB {
 
     public static void excuteSQL(String query) throws SQLException {
         Connection connect = getConnection();
-        PreparedStatement pstmt =  connect.prepareStatement(query);
+        PreparedStatement pstmt = connect.prepareStatement(query);
         pstmt.executeUpdate();
+        pstmt.close();
+        connect.close();
     }
     public static ResultSet selectData(String query) throws SQLException {
         Connection connect = getConnection();
         PreparedStatement pstmt = connect.prepareStatement(query);
         ResultSet rs = pstmt.executeQuery();
+
         return rs;
     }
 

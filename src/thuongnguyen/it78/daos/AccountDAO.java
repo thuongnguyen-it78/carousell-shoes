@@ -14,6 +14,7 @@ public class AccountDAO implements ObjectDAO{
     public AccountDAO() {
 
     }
+    // get all accounts
     public static Map<Integer, Account> getAccounts() {
         Map<Integer, Account> mapTemp = new HashMap<>();
 
@@ -44,6 +45,7 @@ public class AccountDAO implements ObjectDAO{
         return mapTemp;
     }
 
+    // get one account
     public static Account getAccount(int accountID) {
         Account account;
         String query = "select * from accounts where account_id = " + accountID;
@@ -71,6 +73,25 @@ public class AccountDAO implements ObjectDAO{
         return null;
     }
 
+    // get password
+    public static String getPassword(int accountID) {
+
+        String query = "select account_password from accounts where account_id = " + accountID;
+
+        try {
+            ResultSet rs =  new ConnectDB().selectData(query);
+            while(rs.next()) {
+                String password = rs.getString(1);
+
+                return password;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    // get one account through email, password
     public static Account getAccount(String emailLogin, String passwordLogin) {
         String query = "select * from accounts where account_email = ? and account_password = ?";
         Connection connect = ConnectDB.getConnection();
@@ -101,6 +122,7 @@ public class AccountDAO implements ObjectDAO{
         return null;
     }
 
+    // change password
     public static boolean changePassword(int id, String newPassword) {
         String query = "update accounts set account_password = '"
                 + newPassword + "' where account_id = " + id;
@@ -114,6 +136,22 @@ public class AccountDAO implements ObjectDAO{
         return false;
     }
 
+    public static boolean checkPassword(int id, String password) {
+
+        String query = "select * from accounts where account_id='" + id
+                + "' and account_password='" + password + "'";
+        try {
+            ResultSet rs = new ConnectDB().selectData(query);
+            if(rs.next()) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    // check login
     public static boolean checkLogin(String email, String password) {
         String query = "select * from accounts where account_email='" + email
                 + "' and account_password='" + password + "'";
@@ -128,6 +166,7 @@ public class AccountDAO implements ObjectDAO{
         return false;
     }
 
+    // check email exist system
     public static boolean checkEmail(String email) {
         String query = "select * from accounts where account_email='" + email
                 + "'";
@@ -208,20 +247,75 @@ public class AccountDAO implements ObjectDAO{
         return false;
     }
 
+    public boolean updateInfo(Object obj) {
+        Account account = (Account) obj;
+
+        String query = "update accounts set account_fullname = ?, " +
+                "account_address = ?, account_gender = ?," +
+                "account_number = ? where account_id = ?";
+        Connection connect = ConnectDB.getConnection();
+        try {
+            PreparedStatement pstmt = connect.prepareStatement(query);
+            pstmt.setString(1, account.getAccountFullName());
+            pstmt.setString(2, account.getAccountAddress());
+            pstmt.setInt(3, account.getAccountGender());
+            pstmt.setString(4, account.getAccountNumber());
+            pstmt.setInt(5, account.getAccountID());
+
+
+            pstmt.executeUpdate();
+
+            pstmt.close();
+            connect.close();
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return false;
+    }
+
+    public boolean updatePassword(String email, String newPassword) {
+
+        String query = "update accounts set account_password = ? " +
+                "where account_email = ?";
+        Connection connect = ConnectDB.getConnection();
+        try {
+            PreparedStatement pstmt = connect.prepareStatement(query);
+            pstmt.setString(1, newPassword);
+            pstmt.setString(2, email);
+
+            pstmt.executeUpdate();
+
+            pstmt.close();
+            connect.close();
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) {
         AccountDAO accountDAO = new AccountDAO();
 
-        System.out.println(accountDAO.getAccounts());
-        System.out.println(accountDAO.getAccount(1));
-        System.out.println(accountDAO.checkLogin("thuongnguyen.it78@gmail.com", "123456"));
-        System.out.println(AccountDAO.changePassword(1, "123456"));
-        System.out.println(AccountDAO.checkEmail("thuongnguyen.it79@gmail.com"));
-//         Account account = new Account("thuongnguyen.nlu78@gmail.com", "123456", "Mickey", "0702626056", 0, "Phú Yên");
+//        System.out.println(accountDAO.getAccounts());
+//        System.out.println(accountDAO.getAccount(1));
+//        System.out.println(accountDAO.checkLogin("thuongnguyen.it78@gmail.com", "123456"));
+//        System.out.println(AccountDAO.changePassword(1, "123456"));
+//        System.out.println(AccountDAO.checkEmail("thuongnguyen.it79@gmail.com"));
+////         Account account = new Account("thuongnguyen.nlu78@gmail.com", "123456", "Mickey", "0702626056", 0, "Phú Yên");
+//
+////        System.out.println(accountDAO.delete(4));
+//
+//        System.out.println(accountDAO.getAccount("thuongnguyen.it78@gmail.com", "123456"));
 
-//        System.out.println(accountDAO.delete(4));
-
-        System.out.println(accountDAO.getAccount("thuongnguyen.it78@gmail.com", "123456"));
+        System.out.println(checkPassword(1, "1234566"));
+        System.out.println(getPassword(1));
     }
 
 }
