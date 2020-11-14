@@ -37,8 +37,6 @@ public class ConnectDB {
         return rs;
     }
 
-
-
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Connection con = ConnectDB.getConnection();
 

@@ -4,30 +4,26 @@ public class Shoes {
     private int shoesID;
     private String shoesName;
     private String shoesDescription;
+    private int shoesGender;
+    private String shoesImage;
     private double shoesPrice;
-    private int type;
-    private int active;
-    private String image;
-    private int categoryID;
+    private int shoesStock;
+    private String shoesColor;
+    private String shoesSize;
 
-    public Shoes(int shoesID, String shoesName, String shoesDescription, double shoesPrice, int type, int active, String image, int categoryID) {
+    public Shoes() {
+    }
+
+    public Shoes(int shoesID, String shoesName, String shoesDescription, int shoesGender, String shoesImage, double shoesPrice, int shoesStock, String shoesColor, String shoesSize) {
         this.shoesID = shoesID;
         this.shoesName = shoesName;
         this.shoesDescription = shoesDescription;
+        this.shoesGender = shoesGender;
+        this.shoesImage = shoesImage;
         this.shoesPrice = shoesPrice;
-        this.type = type;
-        this.active = active;
-        this.image = image;
-        this.categoryID = categoryID;
-    }
-
-    public Shoes(String shoesName, String shoesDescription, double shoesPrice, int type, String image, int categoryID) {
-        this.shoesName = shoesName;
-        this.shoesDescription = shoesDescription;
-        this.shoesPrice = shoesPrice;
-        this.type = type;
-        this.image = image;
-        this.categoryID = categoryID;
+        this.shoesStock = shoesStock;
+        this.shoesColor = shoesColor;
+        this.shoesSize = shoesSize;
     }
 
     public int getShoesID() {
@@ -54,6 +50,22 @@ public class Shoes {
         this.shoesDescription = shoesDescription;
     }
 
+    public int getShoesGender() {
+        return shoesGender;
+    }
+
+    public void setShoesGender(int shoesGender) {
+        this.shoesGender = shoesGender;
+    }
+
+    public String getShoesImage() {
+        return shoesImage;
+    }
+
+    public void setShoesImage(String shoesImage) {
+        this.shoesImage = shoesImage;
+    }
+
     public double getShoesPrice() {
         return shoesPrice;
     }
@@ -62,36 +74,28 @@ public class Shoes {
         this.shoesPrice = shoesPrice;
     }
 
-    public int getType() {
-        return type;
+    public int getShoesStock() {
+        return shoesStock;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setShoesStock(int shoesStock) {
+        this.shoesStock = shoesStock;
     }
 
-    public int getActive() {
-        return active;
+    public String getShoesColor() {
+        return shoesColor;
     }
 
-    public void setActive(int active) {
-        this.active = active;
+    public void setShoesColor(String shoesColor) {
+        this.shoesColor = shoesColor;
     }
 
-    public String getImage() {
-        return image;
+    public String getShoesSize() {
+        return shoesSize;
     }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public int getCategoryID() {
-        return categoryID;
-    }
-
-    public void setCategoryID(int categoryID) {
-        this.categoryID = categoryID;
+    public void setShoesSize(String shoesSize) {
+        this.shoesSize = shoesSize;
     }
 
     @Override
@@ -100,11 +104,15 @@ public class Shoes {
                 "shoesID=" + shoesID +
                 ", shoesName='" + shoesName + '\'' +
                 ", shoesDescription='" + shoesDescription + '\'' +
+                ", shoesGender=" + shoesGender +
+                ", shoesImage='" + shoesImage + '\'' +
                 ", shoesPrice=" + shoesPrice +
-                ", type=" + type +
-                ", active=" + active +
-                ", image='" + image + '\'' +
-                ", categoryID=" + categoryID +
+                ", shoesStock=" + shoesStock +
+                ", shoesColor='" + shoesColor + '\'' +
+                ", shoesSize='" + shoesSize + '\'' +
                 '}';
     }
 }
+
+
+

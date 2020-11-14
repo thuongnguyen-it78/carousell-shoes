@@ -11,6 +11,9 @@ public class Account {
     private String accountAvatar;
     private int accountRole;
 
+    public Account() {
+    }
+
     public Account(int accountID, String accountEmail, String accountPassword, String accountFullName, String accountNumber, int accountGender, String accountAddress, String accountAvatar, int accountRole) {
         this.accountID = accountID;
         this.accountEmail = accountEmail;
@@ -39,6 +42,8 @@ public class Account {
         this.accountGender = accountGender;
         this.accountAddress = accountAddress;
     }
+
+
 
     public int getAccountID() {
         return accountID;

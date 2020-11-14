@@ -2,7 +2,6 @@ package thuongnguyen.it78.configs;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import java.util.Locale;
 
 public class LibraryMethod {
 
