@@ -1,3 +1,6 @@
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="thuongnguyen.it78.models.Shoes" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -392,9 +395,17 @@
                                 </div>
                             </div>
                         </div>
+                        <%
+                            Map listShoes = (HashMap) request.getAttribute("listShoes");
+
+                            for (Object i : listShoes.values()) {
+                                Shoes shoes = (Shoes) i;
+
+
+                        %>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-7.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img<%= shoes.getShoesImage().split(",")[0]%>">
                                     <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
@@ -403,7 +414,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>T-shirt Contrast Pocket</h6>
+                                    <h6><%= shoes.getShoesName()%></h6>
                                     <a href="#" class="add-cart">+ Add To Cart</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
@@ -427,6 +438,10 @@
                                 </div>
                             </div>
                         </div>
+
+                        <%
+                            }
+                        %>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-8.jpg">
