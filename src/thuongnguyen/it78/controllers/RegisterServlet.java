@@ -62,7 +62,8 @@ public class RegisterServlet extends HttpServlet {
         }
 
         new AccountDAO().create(account);
-        req.getSession().setAttribute("account", account);
+        Account acccountLegal = (Account) new AccountDAO().getAccount(account.getAccountEmail(), account.getAccountPassword());
+        req.getSession().setAttribute("account", acccountLegal);
         res.sendRedirect("/");
     }
 

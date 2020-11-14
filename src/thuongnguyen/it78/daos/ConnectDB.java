@@ -9,7 +9,7 @@ public class ConnectDB {
         String driver = "com.mysql.jdbc.Driver";
         String DB_username = "root";
         String DB_password = "";
-        String DB_URL = "jdbc:mysql://127.0.0.1:3306/shoes";
+        String DB_URL = "jdbc:mysql://127.0.0.1:3306/shoesv2";
         Connection connect = null;
 
         try {
