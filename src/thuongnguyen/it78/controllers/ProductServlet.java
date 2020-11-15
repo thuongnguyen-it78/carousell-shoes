@@ -20,8 +20,8 @@ public class ProductServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        Map listShoes = (HashMap)ShoesDAO.getAllShoes();
-        req.setAttribute("listShoes", listShoes);
-        req.getRequestDispatcher("/views/shop.jsp").forward(req, res);
+//        Map listShoes = (HashMap)ShoesDAO.getAllShoes();
+//        req.setAttribute("listShoes", listShoes);
+//        req.getRequestDispatcher("/views/shop.jsp").forward(req, res);
     }
 }

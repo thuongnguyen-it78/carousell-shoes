@@ -8,13 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9f0213c7-2317-4c11-8169-2f158e9c60ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/daos/CategoryDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/daos/CategoryDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/daos/ShoesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/daos/ShoesDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/CartServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thuongnguyen/it78/daos/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thuongnguyen/it78/daos/CategoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thuongnguyen/it78/daos/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thuongnguyen/it78/daos/AccountDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/img/404.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/shop.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,26 +24,69 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/ConnectDB.java">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/CartServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
-              <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+            <state relative-caret-position="286">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/AccountDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/RegisterServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="16" selection-start-line="16" selection-end-line="52" selection-end-column="5" />
+            <state relative-caret-position="170">
+              <caret line="24" column="62" lean-forward="true" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#getAllAccounts#0;class#AccountDAO#0" />
+                <element signature="method#getAllShoes#0;class#ShoesDAO#0" />
+                <element signature="e#415#422#0" expanded="true" />
+                <element signature="method#getAllShoes#1;class#ShoesDAO#0" />
+                <element signature="e#2195#2202#0" expanded="true" />
+                <element signature="e#3677#5326#0" />
+                <element signature="e#3792#3799#0" expanded="true" />
+                <element signature="method#getShoes#0;class#ShoesDAO#0" />
+                <element signature="e#5774#7869#0" />
+                <element signature="e#5615#5685#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/AccountDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#482#491#0" expanded="true" />
                 <element signature="method#getAccount#0;class#AccountDAO#0" />
                 <element signature="method#getPassword#0;class#AccountDAO#0" />
+                <element signature="method#getAccount#1;class#AccountDAO#0" />
                 <element signature="method#changePassword#0;class#AccountDAO#0" />
                 <element signature="method#checkPassword#0;class#AccountDAO#0" />
                 <element signature="method#checkLogin#0;class#AccountDAO#0" />
@@ -62,58 +102,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1078">
-              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/CategoryDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getAllAccounts#0;class#CategoryDAO#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getAllCategories#0;class#ShoesDAO#0" />
-                <element signature="method#get#0;class#ShoesDAO#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="207">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="24" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/views/shop.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="407" column="140" selection-start-line="407" selection-start-column="140" selection-end-line="407" selection-end-column="140" />
             </state>
           </provider>
         </entry>
@@ -165,7 +160,6 @@
         <option value="$PROJECT_DIR$/web/views/shop-details.jsp" />
         <option value="$PROJECT_DIR$/web/views/shopping-cart.jsp" />
         <option value="$PROJECT_DIR$/web/views/about.jsp" />
-        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/CartServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/IndexServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/PayServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductDetailServlet.java" />
@@ -187,13 +181,14 @@
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/models/Category.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/models/Account.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/models/Shoes.java" />
-        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/daos/AccountDAO.java" />
-        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/daos/ConnectDB.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/daos/CategoryDAO.java" />
-        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java" />
-        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java" />
         <option value="$PROJECT_DIR$/web/views/shop.jsp" />
+        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/CartServlet.java" />
+        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/RegisterServlet.java" />
+        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java" />
+        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java" />
+        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/daos/AccountDAO.java" />
       </list>
     </option>
   </component>
@@ -221,6 +216,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,8 +297,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +339,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.46">
+  <component name="RunManager" selected="Application.ShoesDAO">
     <configuration name="AccountDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="thuongnguyen.it78.daos.AccountDAO" />
       <module name="CarousellShoes" />
@@ -584,12 +579,14 @@
       <workItem from="1604805896699" duration="13079000" />
       <workItem from="1604973506733" duration="340000" />
       <workItem from="1605329012628" duration="1684000" />
-      <workItem from="1605362496231" duration="14454000" />
+      <workItem from="1605362496231" duration="14783000" />
+      <workItem from="1605378510458" duration="508000" />
+      <workItem from="1605416926463" duration="4767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109225000" />
+    <option name="totallyTimeSpent" value="114829000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -604,14 +601,15 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.85946745" visible="true" weight="0.15771812" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8550296" visible="true" weight="0.16174497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.14053254" side_tool="true" visible="true" weight="0.15771812" />
+      <window_info id="Web" order="7" sideWeight="0.14497042" side_tool="true" visible="true" weight="0.16174497" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.04249292" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.04249292" />
@@ -654,7 +652,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/AccountDAO.java</url>
-          <line>230</line>
+          <line>237</line>
           <properties class="thuongnguyen.it78.daos.AccountDAO" method="checkEmail">
             <option name="EMULATED" value="true" />
           </properties>
@@ -664,80 +662,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/about.html" />
-    <entry file="file://$PROJECT_DIR$/web/resources/js/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/img/site/default.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/ObjectDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/configs.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Override.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ref/ReferenceQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/tomcat-8.5.46/lib/mysql-connector-java-5.1.26-bin.jar!/com/mysql/jdbc/AbandonedConnectionCleanupThread.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1056" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/partials/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/404.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/checkout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/contact.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/shop-details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/shopping-cart.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -749,16 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/CartServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,13 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/RegisterServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1006,47 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/AccountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="16" selection-start-line="16" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAllAccounts#0;class#AccountDAO#0" />
-            <element signature="method#getAccount#0;class#AccountDAO#0" />
-            <element signature="method#getPassword#0;class#AccountDAO#0" />
-            <element signature="method#changePassword#0;class#AccountDAO#0" />
-            <element signature="method#checkPassword#0;class#AccountDAO#0" />
-            <element signature="method#checkLogin#0;class#AccountDAO#0" />
-            <element signature="method#checkEmail#0;class#AccountDAO#0" />
-            <element signature="method#create#0;class#AccountDAO#0" />
-            <element signature="method#delete#0;class#AccountDAO#0" />
-            <element signature="method#update#0;class#AccountDAO#0" />
-            <element signature="method#updateInfo#0;class#AccountDAO#0" />
-            <element signature="method#updatePassword#0;class#AccountDAO#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAllCategories#0;class#ShoesDAO#0" />
-            <element signature="method#get#0;class#ShoesDAO#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/CategoryDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1058,19 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/img/img/A60008-3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/img/img/A60008-4.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1080,7 +933,128 @@
     <entry file="file://$PROJECT_DIR$/web/views/shop.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
-          <caret line="407" column="140" selection-start-line="407" selection-start-column="140" selection-end-line="407" selection-end-column="140" />
+          <caret line="407" column="97" selection-start-line="407" selection-start-column="97" selection-end-line="407" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61024_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61023_4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61023_3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61023_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61021_3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61019_4-1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61016_4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61012_2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61005_2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/stu_basas_A61001_3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/A60026_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/A60008-2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/A60008-3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/A60010-1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/img/img/pro_A61088_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/RegisterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="24" column="62" lean-forward="true" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/CartServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="24" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/models/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getAllShoes#0;class#ShoesDAO#0" />
+            <element signature="e#415#422#0" expanded="true" />
+            <element signature="method#getAllShoes#1;class#ShoesDAO#0" />
+            <element signature="e#2195#2202#0" expanded="true" />
+            <element signature="e#3677#5326#0" />
+            <element signature="e#3792#3799#0" expanded="true" />
+            <element signature="method#getShoes#0;class#ShoesDAO#0" />
+            <element signature="e#5774#7869#0" />
+            <element signature="e#5615#5685#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/AccountDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#482#491#0" expanded="true" />
+            <element signature="method#getAccount#0;class#AccountDAO#0" />
+            <element signature="method#getPassword#0;class#AccountDAO#0" />
+            <element signature="method#getAccount#1;class#AccountDAO#0" />
+            <element signature="method#changePassword#0;class#AccountDAO#0" />
+            <element signature="method#checkPassword#0;class#AccountDAO#0" />
+            <element signature="method#checkLogin#0;class#AccountDAO#0" />
+            <element signature="method#checkEmail#0;class#AccountDAO#0" />
+            <element signature="method#create#0;class#AccountDAO#0" />
+            <element signature="method#delete#0;class#AccountDAO#0" />
+            <element signature="method#update#0;class#AccountDAO#0" />
+            <element signature="method#updateInfo#0;class#AccountDAO#0" />
+            <element signature="method#updatePassword#0;class#AccountDAO#0" />
+          </folding>
         </state>
       </provider>
     </entry>

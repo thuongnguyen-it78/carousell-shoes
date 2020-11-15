@@ -6,8 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 public class AccountDAO implements ObjectDAO{
 
@@ -15,8 +14,8 @@ public class AccountDAO implements ObjectDAO{
 
     }
     // get all accounts
-    public static Map<String, Account> getAllAccounts() {
-        Map<String, Account> mapTemp = new HashMap<>();
+    public static ArrayList<Account> getListAccount() {
+        ArrayList<Account> listAccount = new ArrayList<Account>();
 
         String query = "select * from accounts";
         Connection connect = null;
@@ -39,7 +38,7 @@ public class AccountDAO implements ObjectDAO{
                 Account account = new Account(id, email, password, fullname,
                         number, gender, address, avatar, role);
 
-                mapTemp.put(email, account);
+                listAccount.add(account);
             }
             // clean up environment
             rs.close();
@@ -49,7 +48,7 @@ public class AccountDAO implements ObjectDAO{
             e.printStackTrace();
         }
 
-        return mapTemp;
+        return listAccount;
     }
 
     // get account by id
@@ -137,8 +136,16 @@ public class AccountDAO implements ObjectDAO{
                 String avatar = rs.getString(8);
                 int role = Integer.parseInt(rs.getString(9));
 
-                Account account = new Account(id, email, password, fullName,
-                        number, gender, address, avatar, role);
+                Account account = new Account();
+                account.setAccountID(id);
+                account.setAccountEmail(email);
+                account.setAccountPassword(password);
+                account.setAccountFullName(fullName);
+                account.setAccountNumber(number);
+                account.setAccountGender(gender);
+                account.setAccountAddress(address);
+                account.setAccountAvatar(avatar);
+                account.setAccountRole(role);
                 return account;
             }
             // clean up environment
@@ -398,7 +405,7 @@ public class AccountDAO implements ObjectDAO{
     public static void main(String[] args) {
         AccountDAO accountDAO = new AccountDAO();
 
-//        System.out.println(accountDAO.getAllAccounts());
+//        System.out.println(accountDAO.getListAccount());
 //        System.out.println(accountDAO.getAccount(1));
 //        System.out.println(accountDAO.getPassword(1));
 //        System.out.println(accountDAO.getAccount("thuongnguyen.it78@gmail.com", "chkdsk"));
