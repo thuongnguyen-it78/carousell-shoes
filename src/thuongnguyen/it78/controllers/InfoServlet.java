@@ -49,7 +49,12 @@ public class InfoServlet extends HttpServlet {
             return;
         }
 
-        account = new Account(accountID, fullName, number, gender, address);
+        account = new Account();
+        account.setAccountID(accountID);
+        account.setAccountFullName(fullName);
+        account.setAccountNumber(number);
+        account.setAccountGender(gender);
+        account.setAccountAddress(address);
 
 
         if(!new AccountDAO().updateInfo(account)) {

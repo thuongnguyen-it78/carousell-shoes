@@ -1,6 +1,7 @@
-<%@ page import="java.util.HashMap" %>
-<%@ page import="java.util.Map" %>
+
 <%@ page import="thuongnguyen.it78.models.Shoes" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="thuongnguyen.it78.configs.LibraryMethod" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,32 +13,8 @@
 
     <title>Product</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;300;400;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <%@include file="partials/css-link.jsp" %>
 
-    <!-- Font Awesome -->
-    <link
-    rel="stylesheet"
-    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-    crossOrigin="anonymous"
-    />
-
-    <!-- Icont  -->
-    <link rel="icon" href="/resources/img/site/favicon.ico">
-    <!-- <link rel="shortcut icon" href="/resources/img/site/favicon.ico?" type="image/x-icon"> -->
-
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="/resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -46,7 +23,7 @@
     <a href="/shopping-cart.html" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>0</span></a>
 
     <%@include file="partials/header.jsp" %>
-<!-- MAIN SECTION BEGIN -->
+    <!-- MAIN SECTION BEGIN -->
 
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-option">
@@ -81,27 +58,24 @@
                             <div class="accordion" id="accordionExample">
                                 <div class="card">
                                     <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseOne">Categories</a>
+                                        <a data-toggle="collapse" data-target="#collapseOne">LOẠI SẢN PHẨM</a>
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__categories">
                                                 <ul class="nice-scroll">
-                                                    <li><a href="#">Men (20)</a></li>
-                                                    <li><a href="#">Women (20)</a></li>
-                                                    <li><a href="#">Bags (20)</a></li>
-                                                    <li><a href="#">Clothing (20)</a></li>
-                                                    <li><a href="#">Shoes (20)</a></li>
-                                                    <li><a href="#">Accessories (20)</a></li>
-                                                    <li><a href="#">Kids (20)</a></li>
-                                                    <li><a href="#">Kids (20)</a></li>
-                                                    <li><a href="#">Kids (20)</a></li>
+                                                    <li><a href="#">BASAS</a></li>
+                                                    <li><a href="#">VINTAS</a></li>
+                                                    <li><a href="#">URBAS</a></li>
+                                                    <li><a href="#">PATAS</a></li>
+                                                    <li><a href="#">CREAS</a></li>
+                                                    <li><a href="#">TRACK 6</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <!-- <div class="card">
                                     <div class="card-heading">
                                         <a data-toggle="collapse" data-target="#collapseTwo">Branding</a>
                                     </div>
@@ -117,21 +91,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="card">
                                     <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseThree">Filter Price</a>
+                                        <a data-toggle="collapse" data-target="#collapseThree">GIÁ</a>
                                     </div>
                                     <div id="collapseThree" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__price">
                                                 <ul>
-                                                    <li><a href="#">$0.00 - $50.00</a></li>
-                                                    <li><a href="#">$50.00 - $100.00</a></li>
-                                                    <li><a href="#">$100.00 - $150.00</a></li>
-                                                    <li><a href="#">$150.00 - $200.00</a></li>
-                                                    <li><a href="#">$200.00 - $250.00</a></li>
-                                                    <li><a href="#">250.00+</a></li>
+                                                    <li><a href="#">300.000 - 500.000 VND</a></li>
+                                                    <li><a href="#">500.000 - 1.000.000 VND</a></li>
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -139,40 +110,28 @@
                                 </div>
                                 <div class="card">
                                     <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseFour">Size</a>
+                                        <a data-toggle="collapse" data-target="#collapseFour">SIZE</a>
                                     </div>
                                     <div id="collapseFour" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__size">
-                                                <label for="xs">xs
+                                                <label for="xs">39
                                                     <input type="radio" id="xs">
                                                 </label>
-                                                <label for="sm">s
+                                                <label for="sm">40
                                                     <input type="radio" id="sm">
                                                 </label>
-                                                <label for="md">m
+                                                <label for="md">41
                                                     <input type="radio" id="md">
                                                 </label>
-                                                <label for="xl">xl
+                                                <label for="xl">42
                                                     <input type="radio" id="xl">
-                                                </label>
-                                                <label for="2xl">2xl
-                                                    <input type="radio" id="2xl">
-                                                </label>
-                                                <label for="xxl">xxl
-                                                    <input type="radio" id="xxl">
-                                                </label>
-                                                <label for="3xl">3xl
-                                                    <input type="radio" id="3xl">
-                                                </label>
-                                                <label for="4xl">4xl
-                                                    <input type="radio" id="4xl">
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <!-- <div class="card">
                                     <div class="card-heading">
                                         <a data-toggle="collapse" data-target="#collapseFive">Colors</a>
                                     </div>
@@ -209,21 +168,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="card">
                                     <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseSix">Tags</a>
+                                        <a data-toggle="collapse" data-target="#collapseSix">GIỚI TÍNH</a>
                                     </div>
                                     <div id="collapseSix" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__tags">
-                                                <a href="#">Product</a>
-                                                <a href="#">Bags</a>
-                                                <a href="#">Shoes</a>
-                                                <a href="#">Fashio</a>
-                                                <a href="#">Clothing</a>
-                                                <a href="#">Hats</a>
-                                                <a href="#">Accessories</a>
+                                                <a href="#">NAM</a>
+                                                <a href="#">NỮ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -232,21 +186,22 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="col-lg-9">
                     <div class="shop__product__option">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="shop__product__option__left">
-                                    <p>Showing 1–12 of 126 results</p>
+                                    <p>Hiện 1–12 trên 126 kết quả</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="shop__product__option__right">
-                                    <p>Sort by Price:</p>
+                                    <p>Sắp Xếp:</p>
                                     <select>
-                                        <option value="">Low To High</option>
-                                        <option value="">$0 - $55</option>
-                                        <option value="">$55 - $100</option>
+                                        <option value="">Thấp Tới Cao</option>
+                                        <option value="">Cao Tới Thấp</option>
                                     </select>
                                 </div>
                             </div>
@@ -255,26 +210,31 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-2.jpg">
-                                    <ul class="product__hover">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/1.jpg">
+                                    <!--
+                                          <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
                                     </ul>
+                                 -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Piqué Biker Jacket</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas Black Lace - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <p>Dark Grey
+                                    </p>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$67.24</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <h5>450.000 VND
+                                    </h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-4">
                                             <input type="radio" id="pc-4">
                                         </label>
@@ -284,33 +244,34 @@
                                         <label class="grey" for="pc-6">
                                             <input type="radio" id="pc-6">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item sale">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-3.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/2.jpg">
                                     <span class="label">Sale</span>
-                                    <ul class="product__hover">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Multi-pocket Chest Bag</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas Bumper Gum - High Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <p>OFFWHITE/GUM</p>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$43.48</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <h5>490.000 VND</h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-7">
                                             <input type="radio" id="pc-7">
                                         </label>
@@ -320,32 +281,34 @@
                                         <label class="grey" for="pc-9">
                                             <input type="radio" id="pc-9">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-4.jpg">
-                                    <ul class="product__hover">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/3.jpg">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Diagonal Textured Cap</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas Mono - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$60.9</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <p>Dark Grey</p>
+                                    <h5>450.000 VND
+                                    </h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-10">
                                             <input type="radio" id="pc-10">
                                         </label>
@@ -355,33 +318,34 @@
                                         <label class="grey" for="pc-12">
                                             <input type="radio" id="pc-12">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item sale">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-6.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/4.jpg">
                                     <span class="label">Sale</span>
-                                    <ul class="product__hover">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Ankle Boots</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas Mono - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <p>Black</p>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$98.49</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <h5>580.000 VND</h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-16">
                                             <input type="radio" id="pc-16">
                                         </label>
@@ -391,40 +355,33 @@
                                         <label class="grey" for="pc-18">
                                             <input type="radio" id="pc-18">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
-                        <%
-                            Map listShoes = (HashMap) request.getAttribute("listShoes");
-
-                            for (Object i : listShoes.values()) {
-                                Shoes shoes = (Shoes) i;
-
-
-                        %>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img<%= shoes.getShoesImage().split(",")[0]%>">
-                                    <ul class="product__hover">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/5.jpg">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><%= shoes.getShoesName()%></h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas New Simple Life - High Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <p>Taupe</p>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$49.66</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <h5>520.000 VND</h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-19">
                                             <input type="radio" id="pc-19">
                                         </label>
@@ -434,36 +391,33 @@
                                         <label class="grey" for="pc-21">
                                             <input type="radio" id="pc-21">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
-
-                        <%
-                            }
-                        %>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-8.jpg">
-                                    <ul class="product__hover">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/6.jpg">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Basic Flowing Scarf</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas Bumper Gum - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <p>OFFWHITE/GUM</p>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$26.28</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <h5>450.000 VND</h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-22">
                                             <input type="radio" id="pc-22">
                                         </label>
@@ -473,32 +427,33 @@
                                         <label class="grey" for="pc-24">
                                             <input type="radio" id="pc-24">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-9.jpg">
-                                    <ul class="product__hover">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/7.jpg">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Piqué Biker Jacket</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas Bumper Gum - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <p>BLACK/GUM</p>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$67.24</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <h5>450.000 VND</h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-25">
                                             <input type="radio" id="pc-25">
                                         </label>
@@ -508,33 +463,34 @@
                                         <label class="grey" for="pc-27">
                                             <input type="radio" id="pc-27">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item sale">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-10.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/8.jpg">
                                     <span class="label">Sale</span>
-                                    <ul class="product__hover">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Multi-pocket Chest Bag</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas New Simple Life - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$43.48</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <p>Black</p>
+                                    <h5>420.000 VND</h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-28">
                                             <input type="radio" id="pc-28">
                                         </label>
@@ -544,32 +500,33 @@
                                         <label class="grey" for="pc-30">
                                             <input type="radio" id="pc-30">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-11.jpg">
-                                    <ul class="product__hover">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/9.jpg">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Diagonal Textured Cap</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas New Simple Life - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$60.9</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <p>BLACK/GUM</p>
+                                    <h5>450.000 VND </h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-31">
                                             <input type="radio" id="pc-31">
                                         </label>
@@ -579,33 +536,34 @@
                                         <label class="grey" for="pc-33">
                                             <input type="radio" id="pc-33">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item sale">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-12.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/10.jpg">
                                     <span class="label">Sale</span>
-                                    <ul class="product__hover">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Ankle Boots</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas New Simple Life - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$98.49</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <p>CORDOVAN</p>
+                                    <h5>320.000 VND</h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-34">
                                             <input type="radio" id="pc-34">
                                         </label>
@@ -615,32 +573,33 @@
                                         <label class="grey" for="pc-36">
                                             <input type="radio" id="pc-36">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-13.jpg">
-                                    <ul class="product__hover">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/11.jpg">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>T-shirt Contrast Pocket</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Basas New Simple Life - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">TAUPE</a>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$49.66</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <p>TAUPE</p>
+                                    <h5>420.000 VND</h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-37">
                                             <input type="radio" id="pc-37">
                                         </label>
@@ -650,32 +609,33 @@
                                         <label class="grey" for="pc-39">
                                             <input type="radio" id="pc-39">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-14.jpg">
-                                    <ul class="product__hover">
+                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/12.jpg">
+                                    <!-- <ul class="product__hover">
                                         <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                         <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
                                         </li>
                                         <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Basic Flowing Scarf</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
+                                    <h6>Ananas Track 6 Suede - Low Top</h6>
+                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                                    <!-- <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <h5>$26.28</h5>
-                                    <div class="product__color__select">
+                                    </div> -->
+                                    <p>MEADOW</p>
+                                    <h5>990.000 VND</h5>
+                                    <!-- <div class="product__color__select">
                                         <label for="pc-40">
                                             <input type="radio" id="pc-40">
                                         </label>
@@ -685,7 +645,7 @@
                                         <label class="grey" for="pc-42">
                                             <input type="radio" id="pc-42">
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -707,35 +667,19 @@
     </section>
     <!-- Shop Section End -->
 
-<!-- MAIN SECTION END -->
+    <!-- MAIN SECTION END -->
 
 
     <%@include file="partials/footer.jsp" %>
 
     <!-- Search Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
-        </div>
-    </div>
+    <%@include file="partials/search.jsp" %>
     <!-- Search End -->
 
     <!-- Js Plugins -->
     <!-- Js Plugins -->
-    <script src="/resources/js/jquery-3.3.1.min.js"></script>
-    <script src="/resources/js/bootstrap.min.js"></script>
-    <script src="/resources/js/jquery.nice-select.min.js"></script>
-    <script src="/resources/js/jquery.nicescroll.min.js"></script>
-    <script src="/resources/js/jquery.magnific-popup.min.js"></script>
-    <script src="/resources/js/jquery.countdown.min.js"></script>
-    <script src="/resources/js/jquery.slicknav.js"></script>
-    <script src="/resources/js/mixitup.min.js"></script>
-    <script src="/resources/js/owl.carousel.min.js"></script>
-    <script src="/resources/js/main.js"></script>
-    <script src="/resources/js/js-optimization.js"></script>
+    <%@include file="partials/js-link.jsp" %>
+
 </body>
 
 </html>

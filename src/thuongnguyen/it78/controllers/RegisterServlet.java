@@ -51,7 +51,13 @@ public class RegisterServlet extends HttpServlet {
             messages.put("errorAddress", "Please enter address");
         }
 
-        account = new Account(email, password, fullName, number, gender, address);
+        account = new Account();
+        account.setAccountEmail(email);
+        account.setAccountPassword(password);
+        account.setAccountFullName(fullName);
+        account.setAccountNumber(number);
+        account.setAccountGender(gender);
+        account.setAccountAddress(address);
 
         if (messages.isEmpty() || AccountDAO.checkEmail(email)) {
             String error = "Tên email này đã được sử dụng. Hãy thử tên khác.";

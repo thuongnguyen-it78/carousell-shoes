@@ -35,8 +35,16 @@ public class AccountDAO implements ObjectDAO{
                 String avatar = rs.getString(8);
                 int role = Integer.parseInt(rs.getString(9));
 
-                Account account = new Account(id, email, password, fullname,
-                        number, gender, address, avatar, role);
+                Account account = new Account();
+                account.setAccountID(id);
+                account.setAccountEmail(email);
+                account.setAccountPassword(password);
+                account.setAccountFullName(fullname);
+                account.setAccountNumber(number);
+                account.setAccountGender(gender);
+                account.setAccountAddress(address);
+                account.setAccountAvatar(avatar);
+                account.setAccountRole(role);
 
                 listAccount.add(account);
             }
@@ -74,8 +82,22 @@ public class AccountDAO implements ObjectDAO{
                 String avatar = rs.getString(8);
                 int role = Integer.parseInt(rs.getString(9));
 
-                account = new Account(id, email, password, fullname,
-                        number, gender, address, avatar, role);
+                account = new Account();
+                account.setAccountID(id);
+                account.setAccountEmail(email);
+                account.setAccountPassword(password);
+                account.setAccountFullName(fullname);
+                account.setAccountNumber(number);
+                account.setAccountGender(gender);
+                account.setAccountAddress(address);
+                account.setAccountAvatar(avatar);
+                account.setAccountRole(role);
+
+                // clean up environment
+                rs.close();
+                pstmt.close();
+                connect.close();
+
                 return account;
             }
             // clean up environment
@@ -146,6 +168,12 @@ public class AccountDAO implements ObjectDAO{
                 account.setAccountAddress(address);
                 account.setAccountAvatar(avatar);
                 account.setAccountRole(role);
+
+                // clean up environment
+                rs.close();
+                pstmt.close();
+                connect.close();
+
                 return account;
             }
             // clean up environment

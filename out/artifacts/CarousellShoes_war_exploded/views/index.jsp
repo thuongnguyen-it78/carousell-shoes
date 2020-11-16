@@ -9,32 +9,8 @@
 
     <title>Home</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;300;400;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <%@include file="partials/css-link.jsp" %>
 
-    <!-- Font Awesome -->
-    <link
-    rel="stylesheet"
-    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-    crossOrigin="anonymous"
-    />
-
-    <!-- Icont  -->
-    <link rel="icon" href="/resources/img/site/favicon.ico">
-    <!-- <link rel="shortcut icon" href="/resources/img/site/favicon.ico?" type="image/x-icon"> -->
-
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="/resources/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -79,26 +55,29 @@
             <div class="row product__filter">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-1.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/1.jpg">
                             <span class="label">New</span>
-                            <ul class="product__hover">
+                            <!-- <ul class="product__hover">
                                 <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="product__item__text">
-                            <h6>Piqué Biker Jacket</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
+                            <h6>Basas Black Lace - Low Top</h6>
+                            <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                            <!-- <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$67.24</h5>
-                            <div class="product__color__select">
+                            </div> -->
+                            <p>Dark Grey
+                            </p>
+                            <h5>450.000 VND
+                            </h5>
+                            <!-- <div class="product__color__select">
                                 <label for="pc-1">
                                     <input type="radio" id="pc-1">
                                 </label>
@@ -108,31 +87,32 @@
                                 <label class="grey" for="pc-3">
                                     <input type="radio" id="pc-3">
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-2.jpg">
-                            <ul class="product__hover">
+                        <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/2.jpg">
+                            <!-- <ul class="product__hover">
                                 <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="product__item__text">
-                            <h6>Piqué Biker Jacket</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
+                            <h6>Basas Bumper Gum - High Top</h6>
+                            <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                            <!-- <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$67.24</h5>
-                            <div class="product__color__select">
+                            </div> -->
+                            <p>OFFWHITE/GUM</p>
+                            <h5>490.000 VND</h5>
+                            <!-- <div class="product__color__select">
                                 <label for="pc-4">
                                     <input type="radio" id="pc-4">
                                 </label>
@@ -142,32 +122,33 @@
                                 <label class="grey" for="pc-6">
                                     <input type="radio" id="pc-6">
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item sale">
-                        <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-3.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/3.jpg">
                             <span class="label">Sale</span>
-                            <ul class="product__hover">
+                            <!-- <ul class="product__hover">
                                 <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="product__item__text">
-                            <h6>Multi-pocket Chest Bag</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
+                            <h6>Basas Mono - Low Top</h6>
+                            <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                            <!-- <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$43.48</h5>
-                            <div class="product__color__select">
+                            </div> -->
+                            <p>Dark Grey</p>
+                            <h5>450.000 VND</h5>
+                            <!-- <div class="product__color__select">
                                 <label for="pc-7">
                                     <input type="radio" id="pc-7">
                                 </label>
@@ -177,31 +158,32 @@
                                 <label class="grey" for="pc-9">
                                     <input type="radio" id="pc-9">
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-4.jpg">
-                            <ul class="product__hover">
+                        <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/4.jpg">
+                            <!-- <ul class="product__hover">
                                 <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="product__item__text">
-                            <h6>Diagonal Textured Cap</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
+                            <h6>Basas Mono - Low Top</h6>
+                            <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                            <!-- <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$60.9</h5>
-                            <div class="product__color__select">
+                            </div> -->
+                            <p>Black</p>
+                            <h5>580.000 VND</h5>
+                            <!-- <div class="product__color__select">
                                 <label for="pc-10">
                                     <input type="radio" id="pc-10">
                                 </label>
@@ -211,31 +193,32 @@
                                 <label class="grey" for="pc-12">
                                     <input type="radio" id="pc-12">
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-5.jpg">
-                            <ul class="product__hover">
+                        <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/5.jpg">
+                            <!-- <ul class="product__hover">
                                 <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="product__item__text">
-                            <h6>Lether Backpack</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
+                            <h6>Basas New Simple Life - High Top</h6>
+                            <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                            <!-- <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$31.37</h5>
-                            <div class="product__color__select">
+                            </div> -->
+                            <p>Taupe</p>
+                            <h5>520.000 VND</h5>
+                            <!-- <div class="product__color__select">
                                 <label for="pc-13">
                                     <input type="radio" id="pc-13">
                                 </label>
@@ -245,32 +228,34 @@
                                 <label class="grey" for="pc-15">
                                     <input type="radio" id="pc-15">
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item sale">
-                        <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-6.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/6.jpg">
                             <span class="label">Sale</span>
-                            <ul class="product__hover">
+                            <!-- <ul class="product__hover">
                                 <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="product__item__text">
-                            <h6>Ankle Boots</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
+                            <h6>Basas Bumper Gum - Low Top</h6>
+                            <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                            <!-- <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$98.49</h5>
-                            <div class="product__color__select">
+                            </div> -->
+                            <p>OFFWHITE/GUM
+                            </p>
+                            <h5>450.000 VND</h5>
+                            <!-- <div class="product__color__select">
                                 <label for="pc-16">
                                     <input type="radio" id="pc-16">
                                 </label>
@@ -280,31 +265,35 @@
                                 <label class="grey" for="pc-18">
                                     <input type="radio" id="pc-18">
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-7.jpg">
-                            <ul class="product__hover">
+                        <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/7.jpg">
+                            <!-- <ul class="product__hover">
                                 <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="product__item__text">
-                            <h6>T-shirt Contrast Pocket</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
+                            <h6>Basas Bumper Gum - Low Top</h6>
+                            <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                            <!-- <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$49.66</h5>
-                            <div class="product__color__select">
+                            </div> -->
+                            <p>BLACK/GUM
+
+                            </p>
+                            <h5>450.000 VND
+                            </h5>
+                            <!-- <div class="product__color__select">
                                 <label for="pc-19">
                                     <input type="radio" id="pc-19">
                                 </label>
@@ -314,31 +303,33 @@
                                 <label class="grey" for="pc-21">
                                     <input type="radio" id="pc-21">
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="/resources/img/product/product-8.jpg">
-                            <ul class="product__hover">
+                        <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/8.jpg">
+                            <!-- <ul class="product__hover">
                                 <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a></li>
                                 <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="product__item__text">
-                            <h6>Basic Flowing Scarf</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
+                            <h6>Basas New Simple Life - Low Top
+                            </h6>
+                            <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
+                            <!-- <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$26.28</h5>
-                            <div class="product__color__select">
+                            </div> -->
+                            <p>Black</p>
+                            <h5>420.000 VND</h5>
+                            <!-- <div class="product__color__select">
                                 <label for="pc-22">
                                     <input type="radio" id="pc-22">
                                 </label>
@@ -348,7 +339,7 @@
                                 <label class="grey" for="pc-24">
                                     <input type="radio" id="pc-24">
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -437,28 +428,12 @@
     <%@include file="partials/footer.jsp" %>
 
     <!-- Search Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
-        </div>
-    </div>
+    <%@include file="partials/search.jsp" %>
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="/resources/js/jquery-3.3.1.min.js"></script>
-    <script src="/resources/js/bootstrap.min.js"></script>
-    <script src="/resources/js/jquery.nice-select.min.js"></script>
-    <script src="/resources/js/jquery.nicescroll.min.js"></script>
-    <script src="/resources/js/jquery.magnific-popup.min.js"></script>
-    <script src="/resources/js/jquery.countdown.min.js"></script>
-    <script src="/resources/js/jquery.slicknav.js"></script>
-    <script src="/resources/js/mixitup.min.js"></script>
-    <script src="/resources/js/owl.carousel.min.js"></script>
-    <script src="/resources/js/main.js"></script>
-    <script src="/resources/js/js-optimization.js"></script>
+    <%@include file="partials/js-link.jsp" %>
+
 </body>
 
 </html>

@@ -292,9 +292,9 @@ public class ShoesDAO implements ObjectDAO {
         ShoesDAO shoesDAO = new ShoesDAO();
 //        System.out.println(shoesDAO.getAllShoesDetails());
 //        System.out.println(shoesDAO.getAllShoesByGender(2));
-//        System.out.println(shoesDAO.getShoes(4));
+        System.out.println(shoesDAO.getShoes(139));
 //        System.out.println(shoesDAO.getShoesBySize(1, 3));
-        System.out.println(shoesDAO.getListShoesByCategory(5 ));
+//        System.out.println(shoesDAO.getListShoesByCategory(5 ));
 
     }
 

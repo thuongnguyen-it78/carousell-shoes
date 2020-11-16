@@ -6,7 +6,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer__about">
                     <div class="footer__logo">
-                        <a href="" class = "overlay"></a>
+                        <a href="/" class = "overlay"></a>
                     </div>
                     <p>Host line 07072626056. Design and customize by thuongnguyen</p>
                     <div class="footer__icont">
@@ -22,10 +22,10 @@
                 <div class="footer__widget">
                     <h6>SẢN PHẨM</h6>
                     <ul>
-                        <li><a href="#">Giày Nam</a></li>
-                        <li><a href="#">Giày Nữ</a></li>
-                        <li><a href="#">Bán Chạy</a></li>
-                        <li><a href="#">Sale-Off</a></li>
+                        <li><a href="/product-list">Giày Nam</a></li>
+                        <li><a href="/product-list">Giày Nữ</a></li>
+                        <li><a href="/product-list">Bán Chạy</a></li>
+                        <li><a href="/product-list">Sale-Off</a></li>
                     </ul>
                 </div>
             </div>
@@ -33,10 +33,10 @@
                 <div class="footer__widget">
                     <h6>CÔNG TY</h6>
                     <ul>
-                        <li><a href="#">Kết Nối</a></li>
-                        <li><a href="#">Feedbacks</a></li>
-                        <li><a href="#">Chính sách bán hàng</a></li>
-                        <li><a href="#">Cửa hàng</a></li>
+                        <li><a href="/contact-us">Kết Nối</a></li>
+                        <li><a href="/contact-us">Feedbacks</a></li>
+                        <li><a href="/contact-us">Chính sách bán hàng</a></li>
+                        <li><a href="/about-us">Cửa hàng</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                         <script>
                             document.write(new Date().getFullYear());
                         </script>
-                        All rights reserved | This is our project web <a href="https://colorlib.com" target="_blank" style="color: #fff">Team KTT</a>
+                        All rights reserved | This is our project web <a href="https://carrousell-web.web.app" target="_blank" style="color: #fff">Team KTT</a>
                     </p>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </div>

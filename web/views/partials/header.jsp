@@ -70,7 +70,7 @@
 
                             <a href="/account/login"><img src="/resources/img/optimization/icon_dang_nhap.svg" alt=""> Đăng nhập</a>
                             <a href="/account/register"><img src="/resources/img/optimization/icon_dang_nhap.svg" alt=""> Đăng kí</a>
-                            <!-- <a href="/shopping-cart.html"><img src="/resources/img/optimization/icon_gio_hang.svg" alt=""> Giỏ hàng <span>(0)</span></a> -->
+                            <!-- <a href="/me/cart"><img src="/resources/img/optimization/icon_gio_hang.svg" alt=""> Giỏ hàng <span>(0)</span></a> -->
 
                             <%
                             } else {
@@ -110,18 +110,36 @@
                     <a href="/"><img src="/resources/img/site/logo.svg" alt=""></a>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-7 col-md-7">
                 <nav class="header__menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="/shop.html">SẢN PHẨM</a></li>
+                        <li class="active"><a href="/product-list">SẢN PHẨM</a></li>
                         <li><a href="/product-list">GIÀY NAM</a></li>
                         <li><a href="/product-list">GIÀY NỮ</a></li>
-                        <li><a href="/product-list">SALES</a></li>
-                        <li><a href="/product-list">KHÁC</a></li>
+                        <li><a href="/product-list">DANH MỤC</a>
+                            <ul class="dropdown">
+                                <li><a href="/product-list">BASAS</a></li>
+                                <li><a href="/product-list">VINTAS</a></li>
+                                <li><a href="/product-list">URBAS</a></li>
+                                <li><a href="/product-list">PATAS</a></li>
+                                <li><a href="/product-list">CREAS</a></li>
+                                <li><a href="/product-list">TRACK 6</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="/product-list">KHÁC</a>
+                            <ul class="dropdown">
+                                <li><a href="/product-list">BEST SELLER</a></li>
+                                <li><a href="/product-list">NEW PRODUCT</a></li>
+                                <li><a href="/product-list">HOT SALES</a></li>
+
+
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
-            <div class="col-lg-3 col-md-3">
+            <div class="col-lg-2 col-md-2">
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><img src="/resources/img/icon/search.png" alt=""></a>
                     <a href="/contact-us"><img src="/resources/img/icon/heart.png" alt=""></a>

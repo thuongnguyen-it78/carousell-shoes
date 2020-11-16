@@ -270,10 +270,10 @@ ol {
 	display: none;
 	position: fixed;
 	width: 100%;
-	height: 100%;
+	height: 130px;
 	left: 0;
 	top: 0;
-	background: #000;
+	background: #e5e5e5;
 	z-index: 99999;
 }
 
@@ -282,38 +282,48 @@ ol {
 }
 
 .search-model-form input {
+	font-family: "Nunito Sans", sans-serif;
 	width: 500px;
-	font-size: 40px;
+	font-size: 17px;
+	padding: 5px 10px 5px 20px;
 	border: none;
-	border-bottom: 2px solid #333;
-	background: 0 0;
-	color: #999;
+	background: #fff;
+	color: #212529;
+	flex: 1;
+}
+
+.form-search-normal {
+
+	border: 1px solid #eee;
+	display: flex;
+	align-items: center;
+
 }
 
 .search-close-switch {
 	position: absolute;
-	width: 50px;
-	height: 50px;
-	background: #333;
-	color: #fff;
-	text-align: center;
-	border-radius: 50%;
-	font-size: 28px;
-	line-height: 28px;
-	top: 30px;
-	cursor: pointer;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+    width: 129px;
+    height: 50px;
+    background: #e77e22;
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    line-height: 28px;
+    top: -1px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 50px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    right: 0;
+    height: 100%;
+    font-weight: 100;
 }
 
 /*---------------------
@@ -461,7 +471,7 @@ ol {
 	left: 0;
 	top: 56px;
 	width: 150px;
-	background: #111111;
+	background: #333;
 	text-align: left;
 	padding: 5px 0;
 	z-index: 9;
@@ -475,6 +485,10 @@ ol {
 .header__menu ul li .dropdown li {
 	display: block;
 	margin-right: 0;
+}
+
+.header__menu ul li .dropdown li:hover a{
+	color: #e67e22;
 }
 
 .header__menu ul li .dropdown li a {
@@ -927,7 +941,7 @@ ol {
 
 .filter__controls li {
 	color: #b7b7b7;
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 700;
 	list-style: none;
 	display: inline-block;
@@ -940,7 +954,7 @@ ol {
 }
 
 .filter__controls li.active {
-	color: #111111;
+	color: #333;
 }
 
 .product__item {
@@ -967,13 +981,13 @@ ol {
 }
 
 .product__item:hover .product__item__text a {
-	top: 22px;
-	opacity: 1;
-	visibility: visible;
-}
-
-.product__item:hover .product__item__text h6 {
-	opacity: 0;
+    background-color: #e67e22;
+    width: 100%;
+    height: 50px;
+    top: -39px;
+    display: inline-block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .product__item:hover .product__item__text .product__color__select {
@@ -1063,27 +1077,53 @@ ol {
 }
 
 .product__item__text a {
-	font-size: 15px;
-	color: #e67e22;
+	font-size: 18px;
+	color: #fff;
 	font-weight: 700;
 	position: absolute;
 	left: 0;
 	top: 0;
 	opacity: 0;
+	line-height: 50px;
+	text-align: center;
+	text-transform: uppercase;
 	visibility: hidden;
-	-webkit-transition: all, 0.3s;
-	-o-transition: all, 0.3s;
-	transition: all, 0.3s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.3s;
 }
 
 .product__item__text h6 {
-	color: #111111;
-	font-size: 15px;
-	font-weight: 600;
-	margin-bottom: 5px;
+	text-align: center;
+    color: #333;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 5px;
 	-webkit-transition: all, 0.3s;
 	-o-transition: all, 0.3s;
 	transition: all, 0.3s;
+	text-transform: capitalize;
+}
+
+.product__item__text p {
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 25px;
+	margin: 0 0 3px 0;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+
+p {
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0 0 15px 0;
 }
 
 .product__item__text .rating {
@@ -1097,8 +1137,12 @@ ol {
 }
 
 .product__item__text h5 {
-	color: #0d0d0d;
+	text-align: center;
+	color: #000;
+	font-size: 16px;
 	font-weight: 700;
+	text-transform: capitalize;
+
 }
 
 .product__item__text .product__color__select {
@@ -1699,9 +1743,9 @@ ol {
 }
 
 .product__details__option__size label.active {
-	background: #111111;
+	background: #e67e22;
 	color: #ffffff;
-	border-color: #111111;
+	border-color: #ee7c19;
 }
 
 .product__details__option__size label input {
@@ -1765,7 +1809,7 @@ ol {
 	border-radius: 50%;
 }
 .list-icont i{
-	color: #555;
+	color: #E67E22;
 	display: inline-block;
 	margin-right: 7px;
 }
@@ -1785,6 +1829,8 @@ ol {
 }
 
 .product__details__cart__option {
+	padding-bottom: 30px;
+	border-bottom: 1px dashed #555;
 	margin-bottom: 30px;
 }
 
@@ -3508,6 +3554,12 @@ ol {
 /* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
+	form.search-auto {
+		margin-top: 5px;
+		margin-left: 5px;
+		width: 18rem;
+	}
+
 	.header__navbar-user-item a {
 		font-size: 10px !important;
 	}
@@ -3912,6 +3964,7 @@ ol {
 	padding-top: 30px;
 }
 
+
 .contact-us {
 	text-align: center;
 	padding: 40px 0px;
@@ -4029,6 +4082,20 @@ ol {
 		width: 100%;
 		margin-top: 20px;
 		}
+		.search-item-cus {
+			width: 50px;
+			height: 50px;
+		}
+		.search-text-cus {
+			padding-left: 10px;
+			color: #212529;
+		}
+
+		.search-text-cus:hover {
+			color: #e67e22;
+		
+		}
+
 		.social-share-icon {
 		width: 40px;
 		height: 40px;
@@ -4337,3 +4404,73 @@ ol {
 	.container-pw .login-form .checkout__input i {
 		top:52%;
 	}
+
+
+
+	/* SEARCH FORM  */
+
+	.search-auto {
+		margin-top: 36px;
+    	margin-left: 170px;
+		max-width: 30rem;
+		position: relative;
+		}
+		.search-auto-input {
+		height: 50px;
+		width: 100%;
+		display: block;
+		font-family: "Poppins";
+		color: #000;
+		border-radius: 4px;
+		outline: none;
+		background-color: #fff;
+		transition: 0.2s ease;
+		border: 1px solid transparent;
+		box-shadow: var(--shadow);
+		}
+
+		.search-auto-input:focus + .search-auto-list {
+		opacity: 1;
+		visibility: visible;
+		}
+		.search-auto-list {
+		position: absolute;
+		top: 105%;
+		left: 3%;
+		width: 90%;
+		background-color: white;
+		border-radius: 8px;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.2s ease;
+		}
+		.search-auto-item {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		padding: 20px;
+		cursor: pointer;
+		border-radius: inherit;
+		transition: 0.2s ease;
+		}
+		.search-auto-item:hover {
+		color: #e67e22;
+		background-color: #fafafa;
+		}
+
+		.search-form__icon {
+		position: absolute;
+		display: inline-block;
+		width: 70px;
+		height: 50px;
+		background-color: rgb(66, 114, 215);
+		line-height: 51px;
+		padding-left: 8px;
+		right: -35px;
+		top: 0px;
+		border: 0px;
+		color: rgb(255, 255, 255);
+		border-radius: 3px;
+
+		}
+		
