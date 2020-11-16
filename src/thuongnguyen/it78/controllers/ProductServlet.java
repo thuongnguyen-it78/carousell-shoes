@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 @WebServlet("/product-list")
 public class ProductServlet extends HttpServlet {
@@ -22,8 +20,8 @@ public class ProductServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-//        ArrayList<Shoes> listShoes = (ArrayList<Shoes>) ShoesDAO.getListShoesByGender(1);
-//        req.setAttribute("listShoes", listShoes);
+        ArrayList<Shoes> listShoes = ShoesDAO.getListShoesByGender(1);
+        req.setAttribute("listShoes", listShoes);
         req.getRequestDispatcher("/views/shop.jsp").forward(req, res);
     }
 }

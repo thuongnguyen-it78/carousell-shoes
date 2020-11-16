@@ -18,11 +18,10 @@ public class ProductDetailServlet  extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-//        int shoesId = Integer.parseInt(req.getPathInfo().substring(1));
-//        System.out.println(shoesId);
-//        Shoes shoes = ShoesDAO.getShoes(shoesId);
-//        System.out.println(shoes);
-//
+        int shoesId = Integer.parseInt(req.getPathInfo().substring(1));
+        Shoes shoes = ShoesDAO.getShoes(shoesId);
+
+
 //        if(shoes == null) {
 //            System.out.println("aye");
 //            return;
@@ -32,7 +31,7 @@ public class ProductDetailServlet  extends HttpServlet {
 //        res.addHeader("Access-Control-Allow-Credentials", "true");
 
 
-//        req.setAttribute("shoes", shoes);
+        req.setAttribute("shoes", shoes);
 
         req.getRequestDispatcher("/views/shop-details.jsp").forward(req, res);
     }

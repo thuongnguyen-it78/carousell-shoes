@@ -41,9 +41,10 @@ public class CategoryDAO {
         return mapTemp;
     }
 
+
     public static void main(String[] args) {
         CategoryDAO categoryDAO = new CategoryDAO();
-        System.out.println(categoryDAO.getAllCategories());
+//        System.out.println(categoryDAO.getAllCategories());
 
     }
 }

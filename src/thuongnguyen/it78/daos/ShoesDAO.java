@@ -187,6 +187,38 @@ public class ShoesDAO implements ObjectDAO {
         return null;
     }
 
+    public static String getCategoryByShoesID(int id) {
+        String query = "select c.category_name from categories as c, shoes as s, shoes_details as sd " +
+                "where sd.shoes_detail_id = ? and sd.shoes_id = s.shoes_id and s.category_id = c.category_id " +
+                "limit 1";
+        Connection connect = null;
+        PreparedStatement pstmt = null;
+        try {
+            connect = ConnectDB.getConnection();
+            pstmt = connect.prepareStatement(query);
+            pstmt.setInt(1, id);
+            ResultSet rs =  pstmt.executeQuery();
+            while(rs.next()) {
+                String result = rs.getString(1);
+                // clean up environment
+                rs.close();
+                pstmt.close();
+                connect.close();
+
+                return result.trim();
+            }
+            // clean up environment
+            rs.close();
+            pstmt.close();
+            connect.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return "Shoes";
+    }
+
+
     public static Shoes getShoesBySize(int shoesId, int sizeId) {
 
         String query = "select sd.shoes_detail_id, s.shoes_name, s.shoes_image, s.shoes_description," +
