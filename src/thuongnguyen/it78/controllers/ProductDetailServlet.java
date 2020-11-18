@@ -18,9 +18,10 @@ public class ProductDetailServlet  extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        int shoesId = Integer.parseInt(req.getPathInfo().substring(1));
-        Shoes shoes = ShoesDAO.getShoes(shoesId);
 
+        int shoesId = 1;
+        if(req.getPathInfo() != null) shoesId = Integer.parseInt(req.getPathInfo().substring(1));
+        Shoes shoes = ShoesDAO.getShoes(shoesId);
 
 //        if(shoes == null) {
 //            System.out.println("aye");

@@ -114,16 +114,16 @@
                 <nav class="header__menu mobile-menu">
                     <ul>
                         <li class="active"><a href="/product-list">SẢN PHẨM</a></li>
-                        <li><a href="/product-list">GIÀY NAM</a></li>
-                        <li><a href="/product-list">GIÀY NỮ</a></li>
+                        <li><a href="/product-list?gender=1">GIÀY NAM</a></li>
+                        <li><a href="/product-listgender=2">GIÀY NỮ</a></li>
                         <li><a href="/product-list">DANH MỤC</a>
                             <ul class="dropdown">
-                                <li><a href="/product-list">BASAS</a></li>
-                                <li><a href="/product-list">VINTAS</a></li>
-                                <li><a href="/product-list">URBAS</a></li>
-                                <li><a href="/product-list">PATAS</a></li>
-                                <li><a href="/product-list">CREAS</a></li>
-                                <li><a href="/product-list">TRACK 6</a></li>
+                                <li><a href="/product-list?category=1">BASAS</a></li>
+                                <li><a href="/product-list?category=2">VINTAS</a></li>
+                                <li><a href="/product-list?category=3">URBAS</a></li>
+                                <li><a href="/product-list?category=4">PATAS</a></li>
+                                <li><a href="/product-list?category=5">CREAS</a></li>
+                                <li><a href="/product-list?category=6">TRACK 6</a></li>
 
                             </ul>
                         </li>

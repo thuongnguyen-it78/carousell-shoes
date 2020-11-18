@@ -59,7 +59,7 @@ public class LibraryMethod {
     }
 
     public static String getGenderShoes(int i) {
-        if(i == 0) return "Nam";
+        if(i == 1) return "Nam";
         return "Nữ";
     }
 

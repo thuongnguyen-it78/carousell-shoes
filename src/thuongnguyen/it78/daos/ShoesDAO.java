@@ -91,20 +91,24 @@ public class ShoesDAO implements ObjectDAO {
         return listShoes;
     }
 
-    public static ArrayList<Shoes> getListShoesByCategory(int categoryID) {
-        ArrayList<Shoes> listShoes = new ArrayList<Shoes>();
+    public static ArrayList<Shoes> getListShoesByCategoryAndGender(int categoryID, int gender, int begin, int end) {
+        ArrayList<Shoes> listShoes = new ArrayList<>();
 
         String query = "select s.shoes_id, s.shoes_name, s.shoes_image, sd.shoes_detail_price, sd.shoes_detail_color " +
-                "from shoes as s, shoes_details as sd, categories as c " +
-                "where s.shoes_id = sd.shoes_id and s.shoes_gender = 1 and s.category_id = ? " +
-                "group by shoes_id, shoes_name, shoes_image, shoes_detail_price, shoes_detail_color";
+                "from shoes as s, shoes_details as sd " +
+                "where s.shoes_id = sd.shoes_id and s.shoes_gender = ? and s.category_id = ? " +
+                "group by shoes_id, shoes_name, shoes_image, shoes_detail_price, shoes_detail_color " +
+                "limit ?, ?";
 
         Connection connect = null;
         PreparedStatement pstmt = null;
         try {
             connect = ConnectDB.getConnection();
             pstmt = connect.prepareStatement(query);
-            pstmt.setInt(1, categoryID);
+            pstmt.setInt(1, gender);
+            pstmt.setInt(2, categoryID);
+            pstmt.setInt(3, begin);
+            pstmt.setInt(4, end);
             ResultSet rs =  pstmt.executeQuery();
             while(rs.next()) {
                 int shoesID = Integer.parseInt(rs.getString(1));
@@ -136,7 +140,7 @@ public class ShoesDAO implements ObjectDAO {
     public static Shoes getShoes(int shoesId) {
 
         String query = "select sd.shoes_detail_id, s.shoes_name, s.shoes_image, s.shoes_description," +
-                " sd.shoes_detail_price, sd.shoes_detail_color, sd.shoes_detail_stock, ss.size_name " +
+                " sd.shoes_detail_price, sd.shoes_detail_color, sd.shoes_detail_stock, ss.size_name, s.shoes_gender " +
                 "from shoes as s, shoes_details as sd, sizes as ss " +
                 "where s.shoes_id = sd.shoes_id and sd.shoes_id = ? and sd.size_id = ss.size_id and ss.size_id = 1 " +
                 "limit 1;";
@@ -157,6 +161,9 @@ public class ShoesDAO implements ObjectDAO {
                 String shoesColor = rs.getString(6);
                 int shoesStock = Integer.parseInt(rs.getString(7));
                 String shoesSize = rs.getString(8);
+                int shoesGender = Integer.parseInt(rs.getString(9));
+
+
 
                 Shoes shoes = new Shoes();
 
@@ -168,6 +175,7 @@ public class ShoesDAO implements ObjectDAO {
                 shoes.setShoesColor(shoesColor);
                 shoes.setShoesStock(shoesStock);
                 shoes.setShoesSize(shoesSize);
+                shoes.setShoesGender(shoesGender);
 
                 // clean up environment
                 rs.close();

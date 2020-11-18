@@ -11,3 +11,5 @@
 <script src="/resources/js/owl.carousel.min.js"></script>
 <script src="/resources/js/main.js"></script>
 <script src="/resources/js/js-optimization.js"></script>
+<script src="/resources/js/search-shoes.js"></script>
+

@@ -2,6 +2,7 @@ package thuongnguyen.it78.models;
 
 import thuongnguyen.it78.daos.ShoesDAO;
 
+
 public class Shoes {
     private int shoesID;
     private String shoesName;
@@ -103,6 +104,7 @@ public class Shoes {
     public String getCategoryName() {
         return ShoesDAO.getCategoryByShoesID(this.shoesID);
     }
+
 
     @Override
     public String toString() {

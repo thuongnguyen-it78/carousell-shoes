@@ -735,6 +735,14 @@
     <!-- Js Plugins -->
     <%@include file="partials/js-link.jsp" %>
 
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.3/dist/lazyload.min.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+            container: ".product__item__pic"
+        })
+    </script>
+
+
 </body>
 
 </html>
