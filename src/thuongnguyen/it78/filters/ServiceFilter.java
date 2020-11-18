@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @WebFilter(filterName = "MyFilter", urlPatterns = {"/*"})
 public class ServiceFilter implements Filter {
@@ -37,8 +38,8 @@ public class ServiceFilter implements Filter {
         HttpServletResponse res = (HttpServletResponse) servletResponse;
 
         if(req.getSession().getAttribute("cart") == null) {
-            ArrayList listCart = new ArrayList();
-            req.getSession().setAttribute("cart", listCart);
+            HashMap mapCart = new HashMap();
+            req.getSession().setAttribute("cart", mapCart);
         }
 
         req.setCharacterEncoding("UTF-8");

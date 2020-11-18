@@ -11,11 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @WebServlet("/me/cart")
 public class CartServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        ArrayList listCart = (ArrayList) req.getSession().getAttribute("cart");
+        HashMap mapCart = (HashMap) req.getSession().getAttribute("cart");
         int productID = Integer.parseInt(req.getParameter("productID"));
         int quantity = Integer.parseInt(req.getParameter("quantity"));
 
@@ -24,14 +25,22 @@ public class CartServlet extends HttpServlet {
         orderDetail.setShoesID(productID);
         orderDetail.setQuantity(quantity);
 
-        listCart.add(orderDetail);
-        req.getSession().setAttribute("cart", listCart);
+        boolean isHave = mapCart.containsKey(productID);
+
+        if(!isHave) mapCart.put(productID, orderDetail);
+        else {
+            OrderDetail od = (OrderDetail) mapCart.get(productID);
+            od.setQuantity(od.getQuantity() + quantity);
+            mapCart.put(productID, od);
+        }
+
+        System.out.println(mapCart);
+        req.getSession().setAttribute("cart", mapCart);
 
 
 
         PrintWriter pw = res.getWriter();
-        String s = String.format("%s \t %s", productID, quantity);
-        pw.print(s);
+        pw.print(mapCart.size());
 
 
 

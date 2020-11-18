@@ -28,4 +28,13 @@ public class OrderDetail {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "OrderDetail{" +
+                "ShoesID=" + ShoesID +
+                ", OrderID=" + OrderID +
+                ", quantity=" + quantity +
+                '}';
+    }
 }

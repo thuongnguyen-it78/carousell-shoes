@@ -1,11 +1,14 @@
 let quantity
-let productID = 1;
+let productID
 let addButton;
 
 function addToCartAjax(e){
     e.preventDefault();
 
+    productID = document.querySelector('input.product-detail-id').value.trim()
     quantity = document.querySelector('.quantity input').value
+
+    console.log(productID, quantity)
 
     $.ajax({
     url : "/me/cart",
@@ -18,8 +21,7 @@ function addToCartAjax(e){
         },
         success : function (result){
             let quantityCart = document.querySelector('.shopping-cart-fixed span');
-            let quantityCurrent = parseInt(quantityCart.innerText.trim())
-            quantityCart.innerText = quantityCurrent + 1;
+            quantityCart.innerText = parseInt(result);
 
         }
     });
