@@ -282,6 +282,56 @@ public class ShoesDAO implements ObjectDAO {
         return null;
     }
 
+    public static Shoes getShoesByShoesDetailId(int shoesDetailId) {
+
+        String query = "select sd.shoes_detail_id, s.shoes_name, s.shoes_image," +
+                " sd.shoes_detail_price, sd.shoes_detail_color, ss.size_name " +
+                "from shoes as s, shoes_details as sd, sizes as ss " +
+                "where s.shoes_id = sd.shoes_id and sd.shoes_detail_id = ? and sd.size_id = ss.size_id " +
+                "limit 1;";
+
+        Connection connect = null;
+        PreparedStatement pstmt = null;
+        try {
+            connect = ConnectDB.getConnection();
+            pstmt = connect.prepareStatement(query);
+            pstmt.setInt(1, shoesDetailId);
+            ResultSet rs =  pstmt.executeQuery();
+            while(rs.next()) {
+                int shoesID = Integer.parseInt(rs.getString(1));
+                String shoesName = rs.getString(2);
+                String shoesImage = rs.getString(3);
+                double shoesPrice = Double.parseDouble(rs.getString(4));
+                String shoesColor = rs.getString(5);
+                String shoesSize = rs.getString(6);
+
+                Shoes shoes = new Shoes();
+
+                shoes.setShoesID(shoesID);
+                shoes.setShoesName(shoesName);
+                shoes.setShoesImage(shoesImage);
+                shoes.setShoesPrice(shoesPrice);
+                shoes.setShoesColor(shoesColor);
+                shoes.setShoesSize(shoesSize);
+
+                // clean up environment
+                rs.close();
+                pstmt.close();
+                connect.close();
+
+                return shoes;
+            }
+            // clean up environment
+            rs.close();
+            pstmt.close();
+            connect.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
 
 
 //    public static ArrayList<Shoes> getAllShoesByGender(int gender) {
@@ -369,7 +419,8 @@ public static int getIdBySizeAndId(int shoesID, int sizeID) {
 //        System.out.println(shoesDAO.getShoes(139));
 //        System.out.println(shoesDAO.getShoesBySize(1, 3));
 //        System.out.println(shoesDAO.getListShoesByCategory(5 ));
-        System.out.println(shoesDAO.getIdBySizeAndId(3,1));
+//        System.out.println(shoesDAO.getIdBySizeAndId(3,1));
+        System.out.println(shoesDAO.getShoesByShoesDetailId(1));
 
     }
 

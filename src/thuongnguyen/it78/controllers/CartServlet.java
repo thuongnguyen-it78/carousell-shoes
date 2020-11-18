@@ -47,6 +47,9 @@ public class CartServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+
+        HashMap mapShoes = (HashMap) req.getSession().getAttribute("cart");
+
         req.getRequestDispatcher("/views/shopping-cart.jsp").forward(req, res);
 
 

@@ -1,3 +1,8 @@
+<%@ page import="java.util.HashMap" %>
+<%@ page import="thuongnguyen.it78.models.OrderDetail" %>
+<%@ page import="thuongnguyen.it78.models.Shoes" %>
+<%@ page import="thuongnguyen.it78.daos.ShoesDAO" %>
+<%@ page import="thuongnguyen.it78.configs.LibraryMethod" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,91 +60,103 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <%
+                                HashMap<Integer, OrderDetail> mapShoes = (HashMap) request.getSession().getAttribute("cart");
+                                for (int i : mapShoes.keySet()) {
+                                    int quantity = mapShoes.get(i).getQuantity();
+                                    Shoes shoesDetail = ShoesDAO.getShoesByShoesDetailId(i);
+
+
+
+                            %>
                             <tr>
                                 <td class="product__cart__item">
                                     <div class="product__cart__item__pic">
-                                        <img src="/resources/img/shop/1.jpg" alt="">
+                                        <img src="/resources/img<%=shoesDetail.getShoesImage().split(",")[0]%>" alt="">
                                     </div>
                                     <div class="product__cart__item__text">
-                                        <h6>Basas Black Lace - Low Top</h6>
-                                        <p>Dark Grey - 42</p>
-                                        <h5>450.000 VND</h5>
+                                        <h6><%=LibraryMethod.capFirstLetter(LibraryMethod.getNameShoes(shoesDetail.getShoesName()))%></h6>
+                                        <p><%=LibraryMethod.capFirstLetter(shoesDetail.getShoesColor())%> - <%=shoesDetail.getShoesSize()%></p>
+                                        <h5><%=LibraryMethod.priceToString(shoesDetail.getShoesPrice())%></h5>
                                     </div>
                                 </td>
                                 <td class="quantity__item">
                                     <div class="quantity">
                                         <div class="pro-qty-2">
-                                            <input type="text" value="1">
+                                            <input type="text" value="<%=quantity%>">
                                         </div>
                                     </div>
                                 </td>
-                                <td class="cart__price">450.000 VND</td>
+                                <td class="cart__price"><%=LibraryMethod.priceToString(shoesDetail.getShoesPrice() * quantity)%></td>
                                 <td class="cart__close"><i class="fal fa-trash-alt"></i></td>
                             </tr>
-                            <tr>
-                                <td class="product__cart__item">
-                                    <div class="product__cart__item__pic">
-                                        <img src="/resources/img/shop/2.jpg" alt="">
-                                    </div>
-                                    <div class="product__cart__item__text">
-                                        <h6>Basas Bumper Gum - High Top</h6>
-                                        <p>OFFWHITE/GUM - 42</p>
-                                        <h5>490.000 VND</h5>
-                                    </div>
-                                </td>
-                                <td class="quantity__item">
-                                    <div class="quantity">
-                                        <div class="pro-qty-2">
-                                            <input type="text" value="1">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">580.000 VND</td>
-                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>
-                            </tr>
-                            <tr>
-                                <td class="product__cart__item">
-                                    <div class="product__cart__item__pic">
-                                        <img src="/resources/img/shop/3.jpg" alt="">
-                                    </div>
-                                    <div class="product__cart__item__text">
-                                        <h6>Basas Mono - Low Top
-                                        </h6>
-                                        <p>Dark Grey - 42</p>
-                                        <h5>450.000 VND</h5>
-                                    </div>
-                                </td>
-                                <td class="quantity__item">
-                                    <div class="quantity">
-                                        <div class="pro-qty-2">
-                                            <input type="text" value="1">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">500.000 VND</td>
-                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>
-                            </tr>
-                            <tr>
-                                <td class="product__cart__item">
-                                    <div class="product__cart__item__pic">
-                                        <img src="/resources/img/shop/4.jpg" alt="">
-                                    </div>
-                                    <div class="product__cart__item__text">
-                                        <h6>Basas Mono - Low Top</h6>
-                                        <p>Black Cool - 41</p>
-                                        <h5>580.000 VND</h5>
-                                    </div>
-                                </td>
-                                <td class="quantity__item">
-                                    <div class="quantity">
-                                        <div class="pro-qty-2">
-                                            <input type="text" value="1">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">700.000 VND</td>
-                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>
-                            </tr>
+                            <%
+                                }
+                            %>
+<%--                            <tr>--%>
+<%--                                <td class="product__cart__item">--%>
+<%--                                    <div class="product__cart__item__pic">--%>
+<%--                                        <img src="/resources/img/shop/2.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="product__cart__item__text">--%>
+<%--                                        <h6>Basas Bumper Gum - High Top</h6>--%>
+<%--                                        <p>OFFWHITE/GUM - 42</p>--%>
+<%--                                        <h5>490.000 VND</h5>--%>
+<%--                                    </div>--%>
+<%--                                </td>--%>
+<%--                                <td class="quantity__item">--%>
+<%--                                    <div class="quantity">--%>
+<%--                                        <div class="pro-qty-2">--%>
+<%--                                            <input type="text" value="1">--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </td>--%>
+<%--                                <td class="cart__price">580.000 VND</td>--%>
+<%--                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>--%>
+<%--                            </tr>--%>
+<%--                            <tr>--%>
+<%--                                <td class="product__cart__item">--%>
+<%--                                    <div class="product__cart__item__pic">--%>
+<%--                                        <img src="/resources/img/shop/3.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="product__cart__item__text">--%>
+<%--                                        <h6>Basas Mono - Low Top--%>
+<%--                                        </h6>--%>
+<%--                                        <p>Dark Grey - 42</p>--%>
+<%--                                        <h5>450.000 VND</h5>--%>
+<%--                                    </div>--%>
+<%--                                </td>--%>
+<%--                                <td class="quantity__item">--%>
+<%--                                    <div class="quantity">--%>
+<%--                                        <div class="pro-qty-2">--%>
+<%--                                            <input type="text" value="1">--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </td>--%>
+<%--                                <td class="cart__price">500.000 VND</td>--%>
+<%--                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>--%>
+<%--                            </tr>--%>
+<%--                            <tr>--%>
+<%--                                <td class="product__cart__item">--%>
+<%--                                    <div class="product__cart__item__pic">--%>
+<%--                                        <img src="/resources/img/shop/4.jpg" alt="">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="product__cart__item__text">--%>
+<%--                                        <h6>Basas Mono - Low Top</h6>--%>
+<%--                                        <p>Black Cool - 41</p>--%>
+<%--                                        <h5>580.000 VND</h5>--%>
+<%--                                    </div>--%>
+<%--                                </td>--%>
+<%--                                <td class="quantity__item">--%>
+<%--                                    <div class="quantity">--%>
+<%--                                        <div class="pro-qty-2">--%>
+<%--                                            <input type="text" value="1">--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </td>--%>
+<%--                                <td class="cart__price">700.000 VND</td>--%>
+<%--                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>--%>
+<%--                            </tr>--%>
                             </tbody>
                         </table>
                     </div>
