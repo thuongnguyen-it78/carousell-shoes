@@ -2,6 +2,7 @@
 <%@ page import="thuongnguyen.it78.models.Shoes" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="thuongnguyen.it78.configs.LibraryMethod" %>
+<%@ page import="thuongnguyen.it78.models.OrderDetail" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,12 @@
 <body>
     <!-- Fixed -->
     <a href="#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-    <a href="/shopping-cart.html" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>0</span></a>
+    <a href="/shopping-cart.html" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>
+
+        <%ArrayList listCart = (ArrayList) request.getSession().getAttribute("cart");%>
+        <%=listCart.size()%>
+    </span></a>
+
 
     <%@include file="partials/header.jsp" %>
     <!-- MAIN SECTION BEGIN -->
@@ -735,12 +741,6 @@
     <!-- Js Plugins -->
     <%@include file="partials/js-link.jsp" %>
 
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.3/dist/lazyload.min.js"></script>
-    <script>
-        var lazyLoadInstance = new LazyLoad({
-            container: ".product__item__pic"
-        })
-    </script>
 
 
 </body>

@@ -1,6 +1,6 @@
 $(document).ready(search)
 
-let arrayResult = [];
+let arrayRespone = [];
 let inputValue = '';
 let numberOfResult = 3;
 let inputSearch
@@ -13,8 +13,8 @@ function search() {
 
 function searchAjax(e) {
     inputValue = e.target.value
-    if(arrayResult.length > 0) {
-        render(arrayResult)
+    if(arrayRespone.length > 0) {
+        render(arrayRespone)
         console.log('aye')
         return
     }
@@ -27,16 +27,19 @@ function searchAjax(e) {
 }
 
 function render(result) {
-    let arrayRespone = result;
+    arrayRespone = result;
 
-    if(typeof result === "string")
+    if(typeof result === "string") {
         arrayRespone = JSON.parse(result);
+        console.log('aye1')
+    }
 
-    arrayRespone = arrayRespone.filter(shoes => {
+
+    arrayResponeFilter = arrayRespone.filter(shoes => {
         return shoes.shoesName.toLowerCase().includes(inputValue.toLowerCase());
     })
 
-    let arrayResult = arrayRespone.slice(0, numberOfResult)
+    let arrayResult = arrayResponeFilter.slice(0, numberOfResult)
 
     searchResult = document.querySelector(".search-auto-list")
 

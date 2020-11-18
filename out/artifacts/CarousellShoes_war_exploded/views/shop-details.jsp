@@ -137,17 +137,17 @@
                                  <div class="product__details__option">
                                      <div class="product__details__option__size">
                                          <span>Size:</span>
-                                         <label class="active" for="xxl">39
-                                             <input type="radio" id="xxl">
+                                         <label class="active" for="39">39
+                                             <input type="radio" id="39">
                                          </label>
-                                         <label  for="xl">40
-                                             <input type="radio" id="xl">
+                                         <label  for="40">40
+                                             <input type="radio" id="40">
                                          </label>
-                                         <label for="l">41
-                                             <input type="radio" id="l">
+                                         <label for="41">41
+                                             <input type="radio" id="41">
                                          </label>
-                                         <label for="sm">42
-                                             <input type="radio" id="sm">
+                                         <label for="42">42
+                                             <input type="radio" id="42">
                                          </label>
                                      </div>
                                      <!-- <div class="product__details__option__color">
@@ -323,17 +323,17 @@
                                  <div class="product__details__option">
                                      <div class="product__details__option__size">
                                          <span>Size:</span>
-                                         <label class="active" for="xxl">39
-                                             <input type="radio" id="xxl">
+                                         <label class="active" for="39">39
+                                             <input type="radio" id="39">
                                          </label>
-                                         <label  for="xl">40
-                                             <input type="radio" id="xl">
+                                         <label  for="40">40
+                                             <input type="radio" id="40">
                                          </label>
-                                         <label for="l">41
-                                             <input type="radio" id="l">
+                                         <label for="41">41
+                                             <input type="radio" id="41">
                                          </label>
-                                         <label for="sm">42
-                                             <input type="radio" id="sm">
+                                         <label for="42">42
+                                             <input type="radio" id="42">
                                          </label>
                                      </div>
                                      <!-- <div class="product__details__option__color">
@@ -451,7 +451,10 @@
     <!-- Js Plugins -->
      <%@include file="partials/js-link.jsp" %>
 
- 
+     <script src="/resources/js/add-to-cart"></script>
+
+
+
 </body>
 
 </html>
