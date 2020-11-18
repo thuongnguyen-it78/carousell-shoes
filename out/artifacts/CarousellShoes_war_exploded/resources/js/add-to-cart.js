@@ -17,6 +17,9 @@ function addToCartAjax(e){
         quantity : quantity
         },
         success : function (result){
+            let quantityCart = document.querySelector('.shopping-cart-fixed span');
+            let quantityCurrent = parseInt(quantityCart.innerText.trim())
+            quantityCart.innerText = quantityCurrent + 1;
 
         }
     });
@@ -27,6 +30,6 @@ $(document).ready(addToCart)
 function addToCart() {
     addButton = document.querySelector('.product__details__cart__option .primary-btn')
 
-    addButton.addEventListener('click', addToCartAjax())
+    addButton.addEventListener('click', addToCartAjax)
 
 }

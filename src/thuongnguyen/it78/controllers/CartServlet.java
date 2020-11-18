@@ -29,9 +29,9 @@ public class CartServlet extends HttpServlet {
 
 
 
-//        PrintWriter pw = res.getWriter();
-//        String s = String.format("%s \t %s", productID, quantity);
-//        pw.print(s);
+        PrintWriter pw = res.getWriter();
+        String s = String.format("%s \t %s", productID, quantity);
+        pw.print(s);
 
 
 

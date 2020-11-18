@@ -451,7 +451,9 @@
     <!-- Js Plugins -->
      <%@include file="partials/js-link.jsp" %>
 
-     <script src="/resources/js/add-to-cart"></script>
+     <script src="/resources/js/add-to-cart.js"></script>
+
+
 
 
 
