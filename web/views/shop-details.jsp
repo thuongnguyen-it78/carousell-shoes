@@ -324,17 +324,24 @@
                                      <div class="product__details__option__size">
                                          <span>Size:</span>
                                          <label class="active" for="39">39
-                                             <input type="radio" id="39">
+                                             <input type="radio" id="39" value= "1">
                                          </label>
                                          <label  for="40">40
-                                             <input type="radio" id="40">
+                                             <input type="radio" id="40" value= "2">
                                          </label>
                                          <label for="41">41
-                                             <input type="radio" id="41">
+                                             <input type="radio" id="41" value= "3">
                                          </label>
                                          <label for="42">42
-                                             <input type="radio" id="42">
+                                             <input type="radio" id="42" value= "4">
                                          </label>
+<%--                                         <input type="hidden" value="1" class="isProductDetailPage">--%>
+<%--                                         <input type="hidden" value="253662" class="productDetailId">--%>
+<%--                                         <input type="hidden" value="Urbas Unsettling - Low Top" class="productName">--%>
+<%--                                         <input type="hidden" value="Insignia/Sulphur" class="productColor">--%>
+<%--                                         <input type="hidden" value="A61103" class="productSku">--%>
+<%--                                         <input type="hidden" value="490000" class="productPrice">--%>
+                                         <input type="hidden" value="<%=shoes.getShoesID()%>" class="product-detail-id">
                                      </div>
                                      <!-- <div class="product__details__option__color">
                                          <span>Color:</span>
@@ -452,6 +459,9 @@
      <%@include file="partials/js-link.jsp" %>
 
      <script src="/resources/js/add-to-cart.js"></script>
+     <script src="/resources/js/change-size.js"></script>
+
+
 
 
 

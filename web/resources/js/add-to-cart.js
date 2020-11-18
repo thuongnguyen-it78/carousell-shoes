@@ -1,10 +1,11 @@
 let quantity
-let productID = 1;
+let productID
 let addButton;
 
 function addToCartAjax(e){
     e.preventDefault();
 
+    productID = document.querySelector('input.product-detail-id').value.trim()
     quantity = document.querySelector('.quantity input').value
 
     $.ajax({

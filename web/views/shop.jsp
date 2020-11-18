@@ -214,46 +214,46 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/1.jpg">
-                                    <!--
-                                          <ul class="product__hover">
-                                        <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>
-                                        <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>
-                                        </li>
-                                        <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>
-                                    </ul>
-                                 -->
-                                </div>
-                                <div class="product__item__text">
-                                    <h6>Basas Black Lace - Low Top</h6>
-                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>
-                                    <p>Dark Grey
-                                    </p>
-                                    <!-- <div class="rating">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div> -->
-                                    <h5>450.000 VND
-                                    </h5>
-                                    <!-- <div class="product__color__select">
-                                        <label for="pc-4">
-                                            <input type="radio" id="pc-4">
-                                        </label>
-                                        <label class="active black" for="pc-5">
-                                            <input type="radio" id="pc-5">
-                                        </label>
-                                        <label class="grey" for="pc-6">
-                                            <input type="radio" id="pc-6">
-                                        </label>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
+<%--                        <div class="col-lg-4 col-md-6 col-sm-6">--%>
+<%--                            <div class="product__item">--%>
+<%--                                <div class="product__item__pic set-bg" data-setbg="/resources/img/shop/1.jpg">--%>
+<%--                                    <!----%>
+<%--                                          <ul class="product__hover">--%>
+<%--                                        <li><a href="#"><img src="/resources/img/icon/heart.png" alt=""></a></li>--%>
+<%--                                        <li><a href="#"><img src="/resources/img/icon/compare.png" alt=""> <span>Compare</span></a>--%>
+<%--                                        </li>--%>
+<%--                                        <li><a href="#"><img src="/resources/img/icon/search.png" alt=""></a></li>--%>
+<%--                                    </ul>--%>
+<%--                                 -->--%>
+<%--                                </div>--%>
+<%--                                <div class="product__item__text">--%>
+<%--                                    <h6>Basas Black Lace - Low Top</h6>--%>
+<%--                                    <a href="/shop-details.html" class="add-cart">MUA NGAY</a>--%>
+<%--                                    <p>Dark Grey--%>
+<%--                                    </p>--%>
+<%--                                    <!-- <div class="rating">--%>
+<%--                                        <i class="fa fa-star-o"></i>--%>
+<%--                                        <i class="fa fa-star-o"></i>--%>
+<%--                                        <i class="fa fa-star-o"></i>--%>
+<%--                                        <i class="fa fa-star-o"></i>--%>
+<%--                                        <i class="fa fa-star-o"></i>--%>
+<%--                                    </div> -->--%>
+<%--                                    <h5>450.000 VND--%>
+<%--                                    </h5>--%>
+<%--                                    <!-- <div class="product__color__select">--%>
+<%--                                        <label for="pc-4">--%>
+<%--                                            <input type="radio" id="pc-4">--%>
+<%--                                        </label>--%>
+<%--                                        <label class="active black" for="pc-5">--%>
+<%--                                            <input type="radio" id="pc-5">--%>
+<%--                                        </label>--%>
+<%--                                        <label class="grey" for="pc-6">--%>
+<%--                                            <input type="radio" id="pc-6">--%>
+<%--                                        </label>--%>
+<%--                                    </div> -->--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
                         <%
                             ArrayList<Shoes> listShoes = (ArrayList<Shoes>) request.getAttribute("listShoes");
 

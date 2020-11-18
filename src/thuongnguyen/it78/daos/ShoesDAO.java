@@ -326,15 +326,50 @@ public class ShoesDAO implements ObjectDAO {
 //        return listShoes;
 //    }
 
+public static int getIdBySizeAndId(int shoesID, int sizeID) {
+        String query = "select shoes_detail_id from shoes_details " +
+                "where shoes_id = ? and size_id = ? ";
+
+    Connection connect = null;
+    PreparedStatement pstmt = null;
+    try {
+        connect = ConnectDB.getConnection();
+        pstmt = connect.prepareStatement(query);
+        pstmt.setInt(1, shoesID);
+        pstmt.setInt(2, sizeID);
+        ResultSet rs =  pstmt.executeQuery();
+
+        while(rs.next()) {
+            int shoesDetailID = Integer.parseInt(rs.getString(1));
+
+            // clean up environment
+            rs.close();
+            pstmt.close();
+            connect.close();
+
+            return shoesDetailID;
+        }
+        // clean up environment
+        rs.close();
+        pstmt.close();
+        connect.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return shoesID;
+}
+
 
 
     public static void main(String[] args) {
         ShoesDAO shoesDAO = new ShoesDAO();
 //        System.out.println(shoesDAO.getAllShoesDetails());
 //        System.out.println(shoesDAO.getAllShoesByGender(2));
-        System.out.println(shoesDAO.getShoes(139));
+//        System.out.println(shoesDAO.getShoes(139));
 //        System.out.println(shoesDAO.getShoesBySize(1, 3));
 //        System.out.println(shoesDAO.getListShoesByCategory(5 ));
+        System.out.println(shoesDAO.getIdBySizeAndId(3,1));
 
     }
 
