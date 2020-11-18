@@ -2,7 +2,7 @@
 <%@ page import="thuongnguyen.it78.models.Shoes" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="thuongnguyen.it78.configs.LibraryMethod" %>
-<%@ page import="thuongnguyen.it78.models.OrderDetail" %>
+<%@ page import="java.util.HashMap" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +23,8 @@
     <a href="#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
     <a href="/shopping-cart.html" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>
 
-        <%ArrayList listCart = (ArrayList) request.getSession().getAttribute("cart");%>
-        <%=listCart.size()%>
+        <%HashMap mapCart = (HashMap) request.getSession().getAttribute("cart");%>
+        <%=mapCart.size()%>
     </span></a>
 
 

@@ -16,7 +16,6 @@
 <body>
     <!-- Fixed -->
     <a href="#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-    <a href="/shopping-cart.html" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>0</span></a>
 
     <%@include file="partials/header.jsp" %>
 
@@ -48,94 +47,99 @@
                     <div class="shopping__cart__table">
                         <table>
                             <thead>
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                    <th></th>
-                                </tr>
+                            <tr>
+                                <th>SẢN PHẨM</th>
+                                <th>SỐ LƯỢNG</th>
+                                <th>THÀNH TIỀN</th>
+                                <th></th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="/resources/img/shopping-cart/cart-1.jpg" alt="">
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <img src="/resources/img/shop/1.jpg" alt="">
+                                    </div>
+                                    <div class="product__cart__item__text">
+                                        <h6>Basas Black Lace - Low Top</h6>
+                                        <p>Dark Grey - 42</p>
+                                        <h5>450.000 VND</h5>
+                                    </div>
+                                </td>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty-2">
+                                            <input type="text" value="1">
                                         </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>T-shirt Contrast Pocket</h6>
-                                            <h5>$98.49</h5>
+                                    </div>
+                                </td>
+                                <td class="cart__price">450.000 VND</td>
+                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <img src="/resources/img/shop/2.jpg" alt="">
+                                    </div>
+                                    <div class="product__cart__item__text">
+                                        <h6>Basas Bumper Gum - High Top</h6>
+                                        <p>OFFWHITE/GUM - 42</p>
+                                        <h5>490.000 VND</h5>
+                                    </div>
+                                </td>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty-2">
+                                            <input type="text" value="1">
                                         </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
+                                    </div>
+                                </td>
+                                <td class="cart__price">580.000 VND</td>
+                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <img src="/resources/img/shop/3.jpg" alt="">
+                                    </div>
+                                    <div class="product__cart__item__text">
+                                        <h6>Basas Mono - Low Top
+                                        </h6>
+                                        <p>Dark Grey - 42</p>
+                                        <h5>450.000 VND</h5>
+                                    </div>
+                                </td>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty-2">
+                                            <input type="text" value="1">
                                         </div>
-                                    </td>
-                                    <td class="cart__price">$ 30.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="/resources/img/shopping-cart/cart-2.jpg" alt="">
+                                    </div>
+                                </td>
+                                <td class="cart__price">500.000 VND</td>
+                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <img src="/resources/img/shop/4.jpg" alt="">
+                                    </div>
+                                    <div class="product__cart__item__text">
+                                        <h6>Basas Mono - Low Top</h6>
+                                        <p>Black Cool - 41</p>
+                                        <h5>580.000 VND</h5>
+                                    </div>
+                                </td>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty-2">
+                                            <input type="text" value="1">
                                         </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Diagonal Textured Cap</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 32.50</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="/resources/img/shopping-cart/cart-3.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 47.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="/resources/img/shopping-cart/cart-4.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 30.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
+                                    </div>
+                                </td>
+                                <td class="cart__price">700.000 VND</td>
+                                <td class="cart__close"><i class="fal fa-trash-alt"></i></td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -154,19 +158,23 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="cart__discount">
-                        <h6>Discount codes</h6>
+                        <h6>NHẬP MÃ KHUYẾN MÃI</h6>
                         <form action="#">
-                            <input type="text" placeholder="Coupon code">
-                            <button type="submit">Apply</button>
+                            <input type="text" placeholder="Mã giảm giá">
+                            <button type="submit">ÁP DỤNG</button>
                         </form>
                     </div>
                     <div class="cart__total">
-                        <h6>Cart total</h6>
+                        <h6>ĐƠN HÀNG</h6>
                         <ul>
-                            <li>Subtotal <span>$ 169.50</span></li>
-                            <li>Total <span>$ 169.50</span></li>
+                            <li>TẠM TÍNH <span>7.730.000 VND</span></li>
+                            <li>PHÍ GIAO HÀNG <span>30.000 VND</span></li>
+                            <li>GIẢM GIÁ <span>1.200.000 VND</span></li>
+                            <li>TỔNG CỘNG<span>6.500.000 VND</span></li>
+
+
                         </ul>
-                        <a href="#" class="primary-btn">Proceed to checkout</a>
+                        <a href="#" class="primary-btn">TIẾP TỤC THANH TOÁN</a>
                     </div>
                 </div>
             </div>
