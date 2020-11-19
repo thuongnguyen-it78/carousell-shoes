@@ -22,17 +22,21 @@ public class SearchServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
+        // set giá trị trả về là json
         res.setContentType("application/json");
 
+        // lấy ra biến search
         String search = req.getParameter("value");
 
+        // lấy ra arraylist shoes
         ArrayList<Shoes> listShoes = ShoesDAO.getListShoesByGender(1);
 
+        // set return json
         Gson gson = new Gson();
 
+        // return ra list json
         PrintWriter pw = res.getWriter();
         pw.println(gson.toJson(listShoes));
-
     }
 }
 

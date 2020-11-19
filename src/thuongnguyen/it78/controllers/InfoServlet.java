@@ -16,18 +16,20 @@ import java.util.Map;
 public class InfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        req.setCharacterEncoding("UTF-8");
-
+        // tạo ra một map errors
         Map<String, String> messages = new HashMap<>();
+
+        // tạo ra một account
         Account account = null;
 
+        // lấy ra tất cả thông tin infor của account
         int accountID = Integer.parseInt(req.getParameter("accountID"));
         String fullName = req.getParameter("fullname");
         String number = req.getParameter("number");
         int gender = Integer.parseInt(req.getParameter("gender"));
         String address = req.getParameter("address");
 
-
+        // kiểm tra lỗi của các giá trị
         if (fullName == null || fullName.isEmpty()) {
             messages.put("errorEmail", "Please enter fullname");
         }
@@ -43,12 +45,14 @@ public class InfoServlet extends HttpServlet {
             messages.put("errorAddress", "Please enter address");
         }
 
-        if(messages.isEmpty()) {
+        // nếu có lỗi thì trả về cho người dùng và return
+        if(!messages.isEmpty()) {
             req.setAttribute("error", "Thông tin nhập vào không hợp lệ. Vui lòng điền lại.");
             req.getRequestDispatcher("/views/information.jsp").forward(req, res);
             return;
         }
 
+        // tạo account mới
         account = new Account();
         account.setAccountID(accountID);
         account.setAccountFullName(fullName);
@@ -56,16 +60,15 @@ public class InfoServlet extends HttpServlet {
         account.setAccountGender(gender);
         account.setAccountAddress(address);
 
-
+        // update account
         if(!new AccountDAO().updateInfo(account)) {
             req.setAttribute("error", "Cập nhật thông tin thất bại.");
             req.getRequestDispatcher("/views/information.jsp").forward(req, res);
             return;
         }
 
-
+        // lấy ra account hiện tại, và set lại giá trị cho nó
         Account accountLegal = (Account) req.getSession().getAttribute("account");
-
         accountLegal.setAccountFullName(fullName);
         accountLegal.setAccountNumber(number);
         accountLegal.setAccountGender(gender);

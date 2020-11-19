@@ -17,11 +17,11 @@ import java.util.Map;
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        req.setCharacterEncoding("UTF-8");
-
+        // lấy ra các giá trị params
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
+        // tạo ra một map errors
         Map<String, String> messages = new HashMap<>();
 
         if (email == null || email.isEmpty()) {
@@ -32,15 +32,18 @@ public class LoginServlet extends HttpServlet {
             messages.put("password", "Please enter password");
         }
 
+        // nếu nó không lỗi thì get account
         if (messages.isEmpty()) {
             Account account = AccountDAO.getAccount(email, password);
 
+            // account tồn tại thì set session
             if (account != null) {
                 req.getSession().setAttribute("account", account);
                 res.sendRedirect("/");
                 return;
             }
 
+            // báo lỗi và return
             req.setAttribute("error", "Email hoặc mật khẩu không chính xác. Hãy thử đăng nhập lại.");
             req.setAttribute("email", email);
             req.getRequestDispatcher("/views/login.jsp").forward(req, res);

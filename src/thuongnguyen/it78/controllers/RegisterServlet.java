@@ -16,11 +16,13 @@ import java.util.Map;
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
+        // tạo ra một map arrays
         Map<String, String> messages = new HashMap<>();
+
+        // tạo ra một account
         Account account = null;
 
-        req.setCharacterEncoding("UTF-8");
-
+        // lấy ra các giá trị từ params
         String email = req.getParameter("email").trim();
         String password = req.getParameter("password").trim();
         String fullName = req.getParameter("fullname").trim();
@@ -28,7 +30,8 @@ public class RegisterServlet extends HttpServlet {
         int gender = Integer.parseInt(req.getParameter("gender"));
         String address = req.getParameter("address").trim();
 
-        System.out.println(fullName);
+        // kiểm tra nếu có lỗi thì add vào map
+
         if (email == null || email.isEmpty()) {
             messages.put("errorEmail", "Please enter email");
         }
@@ -51,6 +54,7 @@ public class RegisterServlet extends HttpServlet {
             messages.put("errorAddress", "Please enter address");
         }
 
+        // tạo ra giá trị account
         account = new Account();
         account.setAccountEmail(email);
         account.setAccountPassword(password);
@@ -59,6 +63,7 @@ public class RegisterServlet extends HttpServlet {
         account.setAccountGender(gender);
         account.setAccountAddress(address);
 
+        // nếu messages không rỗng và email tồn tại thì return error
         if (messages.isEmpty() || AccountDAO.checkEmail(email)) {
             String error = "Tên email này đã được sử dụng. Hãy thử tên khác.";
             req.setAttribute("account", account);
@@ -67,9 +72,10 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
+        // tạo ra account và lưu vào database và return
         new AccountDAO().create(account);
-        Account acccountLegal = (Account) new AccountDAO().getAccount(account.getAccountEmail(), account.getAccountPassword());
-        req.getSession().setAttribute("account", acccountLegal);
+        Account accountLegal = new AccountDAO().getAccount(account.getAccountEmail(), account.getAccountPassword());
+        req.getSession().setAttribute("account", accountLegal);
         res.sendRedirect("/");
     }
 

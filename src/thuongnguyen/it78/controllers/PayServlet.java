@@ -15,6 +15,5 @@ public class PayServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         req.getRequestDispatcher("/views/checkout.jsp").forward(req, res);
-
     }
 }

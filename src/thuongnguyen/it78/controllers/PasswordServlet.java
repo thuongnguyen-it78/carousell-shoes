@@ -12,10 +12,10 @@ import java.io.IOException;
 @WebServlet("/me/password")
 public class PasswordServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+
         int accountID = Integer.parseInt(req.getParameter("accountID"));
         String password = req.getParameter("password");
         String newPassword = req.getParameter("newpassword");
-
 
         if(!AccountDAO.checkPassword(accountID, password)) {
             String error = "Mật khẩu hiện tại không đúng. Hãy thử nhập lại.";
@@ -38,8 +38,6 @@ public class PasswordServlet extends HttpServlet {
             return;
         }
 
-
-
         String success = "Cập nhật thành công.";
         req.setAttribute("success", success);
         req.getRequestDispatcher("/views/change-pw.jsp").forward(req, res);
@@ -47,6 +45,5 @@ public class PasswordServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         req.getRequestDispatcher("/views/change-pw.jsp").forward(req, res);
-
     }
 }

@@ -13,27 +13,21 @@ import java.io.IOException;
 @WebServlet("/product-detail/*")
 public class ProductDetailServlet  extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        String name = req.getPathInfo();
-        System.out.println(name);
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        int shoesId = 1;
-        if(req.getPathInfo() != null) shoesId = Integer.parseInt(req.getPathInfo().substring(1));
-        Shoes shoes = ShoesDAO.getShoes(shoesId);
+        // mặc định thì shoesID = 1
+        int shoesDetailID = 1;
 
-//        if(shoes == null) {
-//            System.out.println("aye");
-//            return;
-//        }
-//        res.addHeader("Access-Control-Allow-Origin", "localhost:8080");
-//        res.addHeader("Access-Control-Allow-Headers", "X-PINGOTHER, Content-Type");
-//        res.addHeader("Access-Control-Allow-Credentials", "true");
+        // nếu tham số gửi lên khác null thì gán lại shoesID
+        if(req.getPathInfo() != null) shoesDetailID = Integer.parseInt(req.getPathInfo().substring(1));
 
+        // lấy ra shoesDetail bằng shoesDetailID
+        Shoes shoes = ShoesDAO.getShoes(shoesDetailID);
 
+        // return
         req.setAttribute("shoes", shoes);
-
         req.getRequestDispatcher("/views/shop-details.jsp").forward(req, res);
     }
 }

@@ -31,7 +31,5 @@ $(document).ready(addToCart)
 
 function addToCart() {
     addButton = document.querySelector('.product__details__cart__option .primary-btn')
-
     addButton.addEventListener('click', addToCartAjax)
-
 }
