@@ -4548,4 +4548,45 @@ p {
 		color: #f15e2c;
 
 	}
-		
+
+	/* Notications  */
+	.noti {
+		z-index: 2000;
+		width: 300px;
+		padding: 14px;
+		display: flex;
+		align-items: center;
+		border-radius: 6px;
+		color: white;
+		margin-bottom: 10px;
+		position: fixed;
+		right: 5px;
+		top: 50px;
+	}
+	.noti--success {
+		background-color: #00bf9a;
+	}
+	.noti .icon {
+		font-size: 16px;
+		padding-right: 14px;
+	}
+	.noti .desc {
+		font-weight: 300;
+		font-size: 16px;
+		padding-right: 20px;
+		margin: 0;
+	}
+	.noti .close {
+		margin-left: auto;
+		cursor: pointer;
+	}
+
+	.noti.noti--success.noti-hidden {
+		display: none;
+	}
+
+	.noti .desc a {
+		text-decoration: none;
+		display: inline-block;
+		padding-top: 4px;
+	}
