@@ -61,7 +61,7 @@
                             <div class="col-lg-6">
                                 <div class="checkout__input form-group">
                                     <p>Họ tên<span>*</span></p>
-                                    <input type="text" placeholder="Thường Nguyễn" id="fullname" class="form-control" name="fullname"
+                                    <input type="text" placeholder="Thường Nguyễn" id="fullname" class="form-control" name="fullname" autofocus
                                     <%
                                         if (isError) {
                                     %>

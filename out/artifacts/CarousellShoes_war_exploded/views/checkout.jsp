@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="thuongnguyen.it78 17130239 17130299 17130247">
 
-    <title>Check Out</title>
+    <title>Thanh Toán</title>
 
     <%@include file="partials/css-link.jsp" %>
 
@@ -54,7 +54,7 @@
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Fist Name<span>*</span></p>
-                                        <input type="text">
+                                        <input type="text" autofocus>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">

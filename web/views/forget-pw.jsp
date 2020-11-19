@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="thuongnguyen.it78 17130239 17130299 17130247">
 
-    <title>Forgot Password</title>
+    <title>Quên Mật Khẩu</title>
 
     <%@include file="partials/css-link.jsp" %>
 
@@ -60,7 +60,7 @@
                                                                                  
                                 <div class="checkout__input form-group col-lg-12" style="padding: 0;">
                                     <p>Email<span>*</span></p>
-                                    <input type="text" placeholder="thuongnguyen.it78@gmail.com" class="checkout__input__add form-control" id="email" name="email"
+                                    <input type="text" placeholder="thuongnguyen.it78@gmail.com" autofocus class="checkout__input__add form-control" id="email" name="email"
                                     <%
                                         if (request.getAttribute("email") != null) {
                                     %>

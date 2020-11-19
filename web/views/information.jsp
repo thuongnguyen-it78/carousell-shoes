@@ -6,8 +6,8 @@
     <meta name="keywords" content="thuongnguyen.it78 17130239 17130299 17130247">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="thuongnguyen.it78 17130239 17130299 17130247">
-
-    <title>Information</title>
+    <%Account accountInfo = (Account) request.getSession().getAttribute("account");%>
+    <title><%=accountInfo.getAccountFullName()%></title>
 
     <%@include file="partials/css-link.jsp" %>
 
@@ -78,7 +78,7 @@
                                     <div class="col-lg-6">
                                         <div class="checkout__input form-group">
                                             <p>Họ tên<span>*</span></p>
-                                            <input type="text" placeholder="Thường Nguyễn" id="fullname" class="form-control" name="fullname"
+                                            <input type="text" placeholder="Thường Nguyễn" id="fullname" class="form-control" autofocus name="fullname"
                                                    value = "<%=accountLegal.getAccountFullName()%>"
                                             >
                                             <span class="form-message"></span>

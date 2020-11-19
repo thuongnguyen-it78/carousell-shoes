@@ -44,7 +44,7 @@
                         %>
 
                         <div class="form-group">
-                            <input type="email" name="email" class = "form-control" id="email" placeholder="Email"/
+                            <input type="email" name="email" class = "form-control" autofocus id="email" placeholder="Email"/
                             <%
                                 if(request.getAttribute("email") != null) {
                             %>

@@ -35,7 +35,6 @@ function formatNumber(number) {
 // cập nhật lại tổng giá
 function updateCartTotal(event) {
 
-
     if(event) {
         const cartShoesContainer = event.target.parentElement.parentElement.parentElement.parentElement
         const shoesIdInput = event.target.parentElement.querySelector('input')

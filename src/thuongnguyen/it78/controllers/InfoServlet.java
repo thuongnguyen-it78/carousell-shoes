@@ -38,7 +38,7 @@ public class InfoServlet extends HttpServlet {
             messages.put("errorNumber", "Please enter number");
         }
 
-        if (gender != 0 || gender != 1) {
+        if (gender != 0 && gender != 1) {
             messages.put("errorGender", "Please choose gender");
         }
         if (address == null || address.isEmpty()) {
@@ -68,6 +68,7 @@ public class InfoServlet extends HttpServlet {
         }
 
         // lấy ra account hiện tại, và set lại giá trị cho nó
+
         Account accountLegal = (Account) req.getSession().getAttribute("account");
         accountLegal.setAccountFullName(fullName);
         accountLegal.setAccountNumber(number);
