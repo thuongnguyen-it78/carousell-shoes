@@ -78,6 +78,7 @@
                                         <h6><%=LibraryMethod.capFirstLetter(LibraryMethod.getNameShoes(shoesDetail.getShoesName()))%></h6>
                                         <p><%=LibraryMethod.capFirstLetter(shoesDetail.getShoesColor())%> - <%=shoesDetail.getShoesSize()%></p>
                                         <h5><%=LibraryMethod.priceToString(shoesDetail.getShoesPrice())%></h5>
+                                        <input type="hidden" value=<%=shoesDetail.getShoesID()%> class="product-detail-id">
                                     </div>
                                 </td>
                                 <td class="quantity__item">
@@ -209,6 +210,9 @@
 
     <!-- Js Plugins -->
     <%@include file="partials/js-link.jsp" %>
+    <script src="/resources/js/shopping-cart.js"></script>
+
+
 
 </body>
 
