@@ -70,12 +70,12 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__categories">
                                                 <ul class="nice-scroll">
-                                                    <li><a href="#">BASAS</a></li>
-                                                    <li><a href="#">VINTAS</a></li>
-                                                    <li><a href="#">URBAS</a></li>
-                                                    <li><a href="#">PATAS</a></li>
-                                                    <li><a href="#">CREAS</a></li>
-                                                    <li><a href="#">TRACK 6</a></li>
+                                                    <li><a href="#" data-category = "1">BASAS</a></li>
+                                                    <li><a href="#" data-category = "2">VINTAS</a></li>
+                                                    <li><a href="#" data-category = "3">URBAS</a></li>
+                                                    <li><a href="#" data-category = "4">PATAS</a></li>
+                                                    <li><a href="#" data-category = "5">CREAS</a></li>
+                                                    <li><a href="#" data-category = "6">TRACK 6</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -106,8 +106,8 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__price">
                                                 <ul>
-                                                    <li><a href="#">300.000 - 500.000 VND</a></li>
-                                                    <li><a href="#">500.000 - 1.000.000 VND</a></li>
+                                                    <li><a href="#" data-price = "1">300.000 - 500.000 VND</a></li>
+                                                    <li><a href="#" data-price = "2">500.000 - 1.000.000 VND</a></li>
 
                                                 </ul>
                                             </div>
@@ -121,17 +121,17 @@
                                     <div id="collapseFour" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__size">
-                                                <label for="xs">39
-                                                    <input type="radio" id="xs">
+                                                <label for="39">39
+                                                    <input type="radio" id="39" name = "size" value = 1>
                                                 </label>
-                                                <label for="sm">40
-                                                    <input type="radio" id="sm">
+                                                <label for="40">40
+                                                    <input type="radio" id="40" name = "size" value = 2>
                                                 </label>
-                                                <label for="md">41
-                                                    <input type="radio" id="md">
+                                                <label for="41">41
+                                                    <input type="radio" id="41" name = "size" value = 3>
                                                 </label>
-                                                <label for="xl">42
-                                                    <input type="radio" id="xl">
+                                                <label for="42">42
+                                                    <input type="radio" id="42" name = "size" value = 4>
                                                 </label>
                                             </div>
                                         </div>
@@ -182,8 +182,8 @@
                                     <div id="collapseSix" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__tags">
-                                                <a href="#">NAM</a>
-                                                <a href="#">NỮ</a>
+                                                <a href="#" data-gender = "1">NAM</a>
+                                                <a href="#" data-gender = "2">NỮ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -206,8 +206,8 @@
                                 <div class="shop__product__option__right">
                                     <p>Sắp Xếp:</p>
                                     <select>
-                                        <option value="">Thấp Tới Cao</option>
-                                        <option value="">Cao Tới Thấp</option>
+                                        <option data-sort = "asc">Thấp Tới Cao</option>
+                                        <option data-sort = "des">Cao Tới Thấp</option>
                                     </select>
                                 </div>
                             </div>
@@ -740,6 +740,9 @@
     <!-- Js Plugins -->
     <!-- Js Plugins -->
     <%@include file="partials/js-link.jsp" %>
+
+    <script src="/resources/js/filter-shoes.js"></script>
+
 
 
 

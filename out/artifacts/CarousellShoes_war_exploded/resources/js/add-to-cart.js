@@ -25,6 +25,7 @@ function addToCartAjax(e){
             show()
             setTimeout(show, 3000)
 
+
         }
     });
 }
