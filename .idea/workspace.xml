@@ -8,9 +8,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9f0213c7-2317-4c11-8169-2f158e9c60ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/resources/js/add-to-cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/resources/js/add-to-cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/js/add-to-cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/js/add-to-cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/shop.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/WEB-INF/classes/thuongnguyen/it78/configs/LibraryMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/WEB-INF/classes/thuongnguyen/it78/configs/LibraryMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/WEB-INF/classes/thuongnguyen/it78/controllers/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/WEB-INF/classes/thuongnguyen/it78/controllers/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/WEB-INF/classes/thuongnguyen/it78/daos/ShoesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/WEB-INF/classes/thuongnguyen/it78/daos/ShoesDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/resources/js/filter-shoes.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CarousellShoes_war_exploded/resources/js/filter-shoes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/configs/LibraryMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/configs/LibraryMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/controllers/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/controllers/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/daos/ShoesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CarousellShoes/thuongnguyen/it78/daos/ShoesDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thuongnguyen/it78/configs/LibraryMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thuongnguyen/it78/configs/LibraryMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/filter-shoes.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/js/filter-shoes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/search-shoes.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/js/search-shoes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,40 +34,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/shop.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="209" column="64" selection-start-line="209" selection-start-column="64" selection-end-line="209" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/resources/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/resources/js/jquery.nice-select.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="3" column="477" selection-start-line="3" selection-start-column="477" selection-end-line="3" selection-end-column="477" />
+            <state relative-caret-position="2332">
+              <caret line="106" column="76" selection-start-line="106" selection-start-column="71" selection-end-line="106" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -67,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/web/views/partials/js-link.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-end-line="14" />
+              <caret line="13" column="31" selection-start-line="13" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -75,26 +54,108 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/resources/js/filter-shoes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state relative-caret-position="160">
+              <caret line="188" column="157" selection-start-line="188" selection-start-column="157" selection-end-line="188" selection-end-column="157" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/information.jsp">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="80" column="136" selection-start-line="80" selection-start-column="136" selection-end-line="80" selection-end-column="136" />
+            <state relative-caret-position="30">
+              <caret line="390" column="93" selection-start-line="390" selection-start-column="72" selection-end-line="390" selection-end-column="93" />
+              <folding>
+                <element signature="method#getListShoesDetail#0;class#ShoesDAO#0" />
+                <element signature="e#929#1987#0" />
+                <element signature="e#1112#1861#1" />
+                <element signature="e#2011#2055#0" />
+                <element signature="method#getListShoesByGender#0;class#ShoesDAO#0" />
+                <element signature="e#2714#3691#0" />
+                <element signature="e#2934#3565#1" />
+                <element signature="e#3715#3759#0" />
+                <element signature="method#getListShoesByCategoryAndGender#0;class#ShoesDAO#0" />
+                <element signature="e#4502#5590#0" />
+                <element signature="e#4833#5464#1" />
+                <element signature="e#5614#5658#0" />
+                <element signature="method#getShoes#0;class#ShoesDAO#0" />
+                <element signature="e#6302#7864#0" />
+                <element signature="e#6523#7738#1" />
+                <element signature="e#7888#7932#0" />
+                <element signature="method#getCategoryByShoesID#0;class#ShoesDAO#0" />
+                <element signature="e#8401#8978#0" />
+                <element signature="e#8617#8852#1" />
+                <element signature="e#9002#9046#0" />
+                <element signature="method#getShoesBySize#0;class#ShoesDAO#0" />
+                <element signature="e#9687#11164#0" />
+                <element signature="e#9945#11038#1" />
+                <element signature="e#11188#11232#0" />
+                <element signature="method#getShoesByShoesDetailId#0;class#ShoesDAO#0" />
+                <element signature="e#11838#13047#0" />
+                <element signature="e#12065#12921#1" />
+                <element signature="e#13071#13115#0" />
+                <element signature="method#getIdBySizeAndId#0;class#ShoesDAO#0" />
+                <element signature="e#13462#14033#0" />
+                <element signature="e#13697#13927#1" />
+                <element signature="e#14057#14093#0" />
+                <element signature="e#15275#16215#0" />
+                <element signature="e#15458#16089#1" />
+                <element signature="e#16239#16283#0" />
+                <element signature="method#main#0;class#ShoesDAO#0" />
+                <element signature="e#16409#16469#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/shop-details.jsp">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/SearchServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="89" selection-start-line="36" selection-start-column="89" selection-end-line="36" selection-end-column="89" />
+            <state relative-caret-position="487">
+              <caret line="37" column="43" lean-forward="true" selection-start-line="23" selection-end-line="37" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+              <folding>
+                <element signature="method#doPost#0;class#ProductServlet#0" />
+                <element signature="e#805#814#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/configs/LibraryMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3">
+              <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+              <folding>
+                <element signature="method#filterPrice#0;class#LibraryMethod#0" />
+                <element signature="method#capitalize#0;class#LibraryMethod#0" />
+                <element signature="method#capFirstLetter#0;class#LibraryMethod#0" />
+                <element signature="e#882#961#1" />
+                <element signature="method#priceWithDecimal#0;class#LibraryMethod#0" />
+                <element signature="method#priceWithoutDecimal#0;class#LibraryMethod#0" />
+                <element signature="method#priceToString#0;class#LibraryMethod#0" />
+                <element signature="e#1827#1891#1" />
+                <element signature="e#1897#1963#1" />
+                <element signature="method#getNameShoes#0;class#LibraryMethod#0" />
+                <element signature="method#getGenderShoes#0;class#LibraryMethod#0" />
+                <element signature="method#main#0;class#LibraryMethod#0" />
+                <element signature="e#2336#2398#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,7 +163,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/resources/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100166">
+            <state relative-caret-position="311">
               <caret line="4553" column="21" selection-start-line="4553" selection-start-column="21" selection-end-line="4553" selection-end-column="21" />
             </state>
           </provider>
@@ -111,8 +172,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/resources/js/add-to-cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
+            <state relative-caret-position="113">
               <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/resources/js/search-shoes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="29" selection-start-line="29" selection-end-line="33" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -145,12 +215,19 @@
       <find>form</find>
       <find>option</find>
       <find>nice</find>
+      <find>history.pushState({}, null, `${originLink}/${currentLink}`);</find>
+      <find>history.pushState({}, null, totalLink)</find>
+      <find>price</find>
     </findStrings>
     <replaceStrings>
       <replace>/product</replace>
       <replace>/contact-us</replace>
       <replace>/product-list</replace>
       <replace>id=&quot;42&quot;</replace>
+      <replace>history.pushState({}, null, `${originPathLink}${currentLink}`);</replace>
+      <replace>history.pushState({}, null, totalLink)</replace>
+      <replace>history.pushState({}, null, totalLink) \n filterShoesAjax(totalLink)</replace>
+      <replace>history.pushState({}, null, totalLink)  filterShoesAjax(totalLink)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -169,15 +246,12 @@
         <option value="$PROJECT_DIR$/web/views/about.jsp" />
         <option value="$PROJECT_DIR$/web/views/partials/footer.jsp" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/daos/CategoryDAO.java" />
-        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/configs/LibraryMethod.java" />
         <option value="$PROJECT_DIR$/web/views/partials/header.jsp" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/models/Shoes.java" />
         <option value="$PROJECT_DIR$/web/views/partials/js-link.jsp" />
-        <option value="$PROJECT_DIR$/web/resources/js/search-shoes.js" />
         <option value="$PROJECT_DIR$/web/resources/js/addToCart.js" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/api/ChangeSizeServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/models/OrderDetail.java" />
-        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java" />
         <option value="$PROJECT_DIR$/web/views/shopping-cart.jsp" />
         <option value="$PROJECT_DIR$/web/resources/js/main.js" />
         <option value="$PROJECT_DIR$/web/resources/js/change-size.js" />
@@ -190,7 +264,6 @@
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/PasswordServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/PayServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductDetailServlet.java" />
-        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/api/CartServlet.java" />
         <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/InfoServlet.java" />
@@ -209,6 +282,10 @@
         <option value="$PROJECT_DIR$/web/resources/js/add-to-cart.js" />
         <option value="$PROJECT_DIR$/web/views/shop.jsp" />
         <option value="$PROJECT_DIR$/web/resources/js/jquery.nice-select.min.js" />
+        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java" />
+        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/configs/LibraryMethod.java" />
+        <option value="$PROJECT_DIR$/web/resources/js/search-shoes.js" />
+        <option value="$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java" />
         <option value="$PROJECT_DIR$/web/resources/js/filter-shoes.js" />
       </list>
     </option>
@@ -238,14 +315,51 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarousellShoes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarousellShoes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarousellShoes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="it78" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarousellShoes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="it78" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarousellShoes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="it78" type="462c0819:PsiDirectoryNode" />
+              <item name="configs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarousellShoes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="it78" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarousellShoes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="it78" type="462c0819:PsiDirectoryNode" />
+              <item name="daos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarousellShoes" type="b2602c69:ProjectViewProjectNode" />
@@ -288,6 +402,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -598,12 +714,15 @@
       <workItem from="1606102507234" duration="1785000" />
       <workItem from="1606144773232" duration="351000" />
       <workItem from="1606195866534" duration="705000" />
-      <workItem from="1606224319444" duration="11135000" />
+      <workItem from="1606224319444" duration="11979000" />
+      <workItem from="1606282277144" duration="2526000" />
+      <workItem from="1606292949189" duration="2386000" />
+      <workItem from="1606295579033" duration="4367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213813000" />
+    <option name="totallyTimeSpent" value="223936000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -618,7 +737,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8534279" visible="true" weight="0.10939597" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8534279" visible="true" weight="0.17315437" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -628,7 +747,7 @@
       <window_info id="Web" order="7" sideWeight="0.1465721" side_tool="true" weight="0.16174497" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30878186" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34985834" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -726,16 +845,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/CategoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="method#getAllCategories#0;class#CategoryDAO#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/partials/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -778,17 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5544">
-          <caret line="305" column="49" selection-start-line="305" selection-start-column="49" selection-end-line="305" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8839#10989#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -807,13 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2310">
           <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/js/search-shoes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -899,16 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1067,10 +1148,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/SearchServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="154">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2090">
+          <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/information.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1760">
+          <caret line="80" column="136" selection-start-line="80" selection-start-column="136" selection-end-line="80" selection-end-column="136" />
         </state>
       </provider>
     </entry>
@@ -1081,58 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100166">
-          <caret line="4553" column="21" selection-start-line="4553" selection-start-column="21" selection-end-line="4553" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/js/add-to-cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/information.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="80" column="136" selection-start-line="80" selection-start-column="136" selection-end-line="80" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/partials/js-link.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/shop.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="209" column="64" selection-start-line="209" selection-start-column="64" selection-end-line="209" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/js/jquery.nice-select.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -1140,10 +1186,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/shop.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2332">
+          <caret line="106" column="76" selection-start-line="106" selection-start-column="71" selection-end-line="106" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/partials/js-link.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="31" selection-start-line="13" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/daos/ShoesDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="390" column="93" selection-start-line="390" selection-start-column="72" selection-end-line="390" selection-end-column="93" />
+          <folding>
+            <element signature="method#getListShoesDetail#0;class#ShoesDAO#0" />
+            <element signature="e#929#1987#0" />
+            <element signature="e#1112#1861#1" />
+            <element signature="e#2011#2055#0" />
+            <element signature="method#getListShoesByGender#0;class#ShoesDAO#0" />
+            <element signature="e#2714#3691#0" />
+            <element signature="e#2934#3565#1" />
+            <element signature="e#3715#3759#0" />
+            <element signature="method#getListShoesByCategoryAndGender#0;class#ShoesDAO#0" />
+            <element signature="e#4502#5590#0" />
+            <element signature="e#4833#5464#1" />
+            <element signature="e#5614#5658#0" />
+            <element signature="method#getShoes#0;class#ShoesDAO#0" />
+            <element signature="e#6302#7864#0" />
+            <element signature="e#6523#7738#1" />
+            <element signature="e#7888#7932#0" />
+            <element signature="method#getCategoryByShoesID#0;class#ShoesDAO#0" />
+            <element signature="e#8401#8978#0" />
+            <element signature="e#8617#8852#1" />
+            <element signature="e#9002#9046#0" />
+            <element signature="method#getShoesBySize#0;class#ShoesDAO#0" />
+            <element signature="e#9687#11164#0" />
+            <element signature="e#9945#11038#1" />
+            <element signature="e#11188#11232#0" />
+            <element signature="method#getShoesByShoesDetailId#0;class#ShoesDAO#0" />
+            <element signature="e#11838#13047#0" />
+            <element signature="e#12065#12921#1" />
+            <element signature="e#13071#13115#0" />
+            <element signature="method#getIdBySizeAndId#0;class#ShoesDAO#0" />
+            <element signature="e#13462#14033#0" />
+            <element signature="e#13697#13927#1" />
+            <element signature="e#14057#14093#0" />
+            <element signature="e#15275#16215#0" />
+            <element signature="e#15458#16089#1" />
+            <element signature="e#16239#16283#0" />
+            <element signature="method#main#0;class#ShoesDAO#0" />
+            <element signature="e#16409#16469#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="4553" column="21" selection-start-line="4553" selection-start-column="21" selection-end-line="4553" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/SearchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="37" column="43" lean-forward="true" selection-start-line="23" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/controllers/ProductServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+          <folding>
+            <element signature="method#doPost#0;class#ProductServlet#0" />
+            <element signature="e#805#814#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/js/search-shoes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="29" selection-start-line="29" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/js/add-to-cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thuongnguyen/it78/configs/LibraryMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding>
+            <element signature="method#filterPrice#0;class#LibraryMethod#0" />
+            <element signature="method#capitalize#0;class#LibraryMethod#0" />
+            <element signature="method#capFirstLetter#0;class#LibraryMethod#0" />
+            <element signature="e#882#961#1" />
+            <element signature="method#priceWithDecimal#0;class#LibraryMethod#0" />
+            <element signature="method#priceWithoutDecimal#0;class#LibraryMethod#0" />
+            <element signature="method#priceToString#0;class#LibraryMethod#0" />
+            <element signature="e#1827#1891#1" />
+            <element signature="e#1897#1963#1" />
+            <element signature="method#getNameShoes#0;class#LibraryMethod#0" />
+            <element signature="method#getGenderShoes#0;class#LibraryMethod#0" />
+            <element signature="method#main#0;class#LibraryMethod#0" />
+            <element signature="e#2336#2398#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/js/filter-shoes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        <state relative-caret-position="160">
+          <caret line="188" column="157" selection-start-line="188" selection-start-column="157" selection-end-line="188" selection-end-column="157" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

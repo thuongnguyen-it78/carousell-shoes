@@ -3,8 +3,19 @@ package thuongnguyen.it78.configs;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Arrays;
+// Ctrl + Shirt + -
 
 public class LibraryMethod {
+
+    public static String filterPrice(int price) {
+        if(price == 1) return " and sd.shoes_detail_price > 300000 and sd.shoes_detail_price < 500000 ";
+        return " and sd.shoes_detail_price > 500000 ";
+    }
+
+    public static String filterSort(String sort) {
+        if(sort.equals("asc")) return " order by sd.shoes_detail_price asc ";
+        return " order by sd.shoes_detail_price desc ";
+    }
 
     public static String capitalize(String str) {
         if(str == null) return str;

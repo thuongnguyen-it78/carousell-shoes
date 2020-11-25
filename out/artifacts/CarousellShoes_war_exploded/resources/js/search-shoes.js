@@ -31,7 +31,6 @@ function render(result) {
 
     if(typeof result === "string") {
         arrayRespone = JSON.parse(result);
-        console.log('aye1')
     }
 
 

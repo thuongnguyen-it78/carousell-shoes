@@ -1,6 +1,7 @@
 package thuongnguyen.it78.daos;
 
 
+import thuongnguyen.it78.configs.LibraryMethod;
 import thuongnguyen.it78.models.Shoes;
 
 import java.sql.Connection;
@@ -10,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ShoesDAO implements ObjectDAO {
+    // lấy toàn bộ shoes detail
     public static ArrayList<Shoes> getListShoesDetail() {
         ArrayList<Shoes> listShoes = new ArrayList<Shoes>();
 
@@ -49,6 +51,7 @@ public class ShoesDAO implements ObjectDAO {
         return listShoes;
     }
 
+    // lấy một list shoes detail theo giới tính
     public static ArrayList<Shoes> getListShoesByGender(int gender) {
         ArrayList<Shoes> listShoes = new ArrayList<Shoes>();
 
@@ -91,6 +94,7 @@ public class ShoesDAO implements ObjectDAO {
         return listShoes;
     }
 
+    // lấy list shoes để phân trang
     public static ArrayList<Shoes> getListShoesByCategoryAndGender(int categoryID, int gender, int begin, int end) {
         ArrayList<Shoes> listShoes = new ArrayList<>();
 
@@ -137,6 +141,7 @@ public class ShoesDAO implements ObjectDAO {
         return listShoes;
     }
 
+    // lấy một shoes chi tiết
     public static Shoes getShoes(int shoesId) {
 
         String query = "select sd.shoes_detail_id, s.shoes_name, s.shoes_image, s.shoes_description," +
@@ -195,6 +200,7 @@ public class ShoesDAO implements ObjectDAO {
         return null;
     }
 
+    // kiểm tra id shoes này là thuộc category nào
     public static String getCategoryByShoesID(int id) {
         String query = "select c.category_name from categories as c, shoes as s, shoes_details as sd " +
                 "where sd.shoes_detail_id = ? and sd.shoes_id = s.shoes_id and s.category_id = c.category_id " +
@@ -226,7 +232,7 @@ public class ShoesDAO implements ObjectDAO {
         return "Shoes";
     }
 
-
+    // get shoes bằng size
     public static Shoes getShoesBySize(int shoesId, int sizeId) {
 
         String query = "select sd.shoes_detail_id, s.shoes_name, s.shoes_image, s.shoes_description," +
@@ -282,6 +288,7 @@ public class ShoesDAO implements ObjectDAO {
         return null;
     }
 
+    // lấy ra một đôi giày bằng shoes detail id
     public static Shoes getShoesByShoesDetailId(int shoesDetailId) {
 
         String query = "select sd.shoes_detail_id, s.shoes_name, s.shoes_image," +
@@ -332,51 +339,8 @@ public class ShoesDAO implements ObjectDAO {
         return null;
     }
 
-
-
-//    public static ArrayList<Shoes> getAllShoesByGender(int gender) {
-//        ArrayList<Shoes> listShoes = new ArrayList<Shoes>();
-//
-//        String query = "select s.shoes_id, s.shoes_name, s.shoes_image, sd.shoes_detail_price, " +
-//                "sd.shoes_detail_color from shoes as s, shoes_details as sd where s.shoes_id = " +
-//                "sd.shoes_id and s.shoes_gender = ? group by shoes_id, shoes_name, shoes_image, " +
-//                "shoes_detail_price, shoes_detail_color";
-//
-//        Connection connect = null;
-//        PreparedStatement pstmt = null;
-//        try {
-//            connect = ConnectDB.getConnection();
-//            pstmt = connect.prepareStatement(query);
-//            pstmt.setInt(1, gender);
-//            ResultSet rs =  pstmt.executeQuery();
-//            while(rs.next()) {
-//                int shoesID = Integer.parseInt(rs.getString(1));
-//                String shoesName = rs.getString(2);
-//                String shoesImage = rs.getString(3);
-//                double shoesPrice = Double.parseDouble(rs.getString(4));
-//                String shoesColor = rs.getString(5);
-//
-//                Shoes shoes = new Shoes();
-//                shoes.setShoesID(shoesID);
-//                shoes.setShoesName(shoesName);
-//                shoes.setShoesImage(shoesImage);
-//                shoes.setShoesPrice(shoesPrice);
-//                shoes.setShoesColor(shoesColor);
-//
-//                listShoes.add(shoes);
-//            }
-//            // clean up environment
-//            rs.close();
-//            pstmt.close();
-//            connect.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return listShoes;
-//    }
-
-public static int getIdBySizeAndId(int shoesID, int sizeID) {
+    // lấy ra một đôi giày bằng shoesID và sizeid
+    public static int getIdBySizeAndId(int shoesID, int sizeID) {
         String query = "select shoes_detail_id from shoes_details " +
                 "where shoes_id = ? and size_id = ? ";
 
@@ -409,6 +373,59 @@ public static int getIdBySizeAndId(int shoesID, int sizeID) {
 
     return shoesID;
 }
+
+    // get list shoes
+    public static ArrayList<Shoes> getListShoes(int category, int price, int size, int gender, String sort) {
+        ArrayList<Shoes> listShoes = new ArrayList<>();
+        String categoryFilter = " and s.category_id = " + category;
+        String genderFilter = " and s.shoes_gender = " + gender;
+
+        String template = "";
+        String sortTemplate = "";
+
+        if(category != 0) template += categoryFilter;
+        if(price != 0) template += LibraryMethod.filterPrice(price);
+        if(gender != 0) template += genderFilter;
+        if(sort != null) sortTemplate += LibraryMethod.filterSort(sort);
+
+        String query = "select s.shoes_id, s.shoes_name, s.shoes_image, sd.shoes_detail_price, sd.shoes_detail_color " +
+                "from shoes as s, shoes_details as sd " +
+                "where s.shoes_id = sd.shoes_id " + template +
+                " group by shoes_id, shoes_name, shoes_image, shoes_detail_price, shoes_detail_color " +
+                sortTemplate;
+
+        Connection connect = null;
+        PreparedStatement pstmt = null;
+        try {
+            connect = ConnectDB.getConnection();
+            pstmt = connect.prepareStatement(query);
+            ResultSet rs =  pstmt.executeQuery();
+            while(rs.next()) {
+                int shoesID = Integer.parseInt(rs.getString(1));
+                String shoesName = rs.getString(2);
+                String shoesImage = rs.getString(3);
+                double shoesPrice = Double.parseDouble(rs.getString(4));
+                String shoesColor = rs.getString(5);
+
+                Shoes shoes = new Shoes();
+                shoes.setShoesID(shoesID);
+                shoes.setShoesName(shoesName);
+                shoes.setShoesImage(shoesImage);
+                shoes.setShoesPrice(shoesPrice);
+                shoes.setShoesColor(shoesColor);
+
+                listShoes.add(shoes);
+            }
+            // clean up environment
+            rs.close();
+            pstmt.close();
+            connect.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return listShoes;
+    }
 
 
 

@@ -1,5 +1,6 @@
 package thuongnguyen.it78.controllers;
 
+import com.google.gson.Gson;
 import thuongnguyen.it78.daos.ShoesDAO;
 import thuongnguyen.it78.models.Shoes;
 
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 @WebServlet("/product-list")
@@ -24,51 +26,63 @@ public class ProductServlet extends HttpServlet {
         // tạo ra một listShoes có id là shoesID
         ArrayList<Shoes> listShoes;
 
+
+
         // filter
 
-        // mặc định thì category trả về là 1 và giới tính là nam
-        int gender = 1;
-        int category = 1;
+        // mặc định của tất cả giá trị
+        int category = 0;
+        int price = 0;
+        int size = 0;
+        int gender = 0;
+        String sort = null;
 
-        // pagination
-
-        // mặc định là page 1 và số record mỗi dòng là 12
-        int page = 1;
-        final int recordsPerPage = 12;
-
-
-
-        // mặc định lấy ra list shoes bằng gender mặc định
-        listShoes = ShoesDAO.getListShoesByGender(gender);
 
         // lấy ra các tham số truyền vào
-        String pageParams = req.getParameter("page");
-        String genderParams = req.getParameter("gender");
         String categoryParams = req.getParameter("category");
+        String priceParams = req.getParameter("price");
+        String sizeParams = req.getParameter("size");
+        String genderParams = req.getParameter("gender");
+        String sortParams = req.getParameter("sort");
+
+
 
         // nếu pageParams khác null thì set lại
-        if(pageParams != null) page = Integer.parseInt(pageParams);
+        if(categoryParams != null) category = Integer.parseInt(categoryParams);
 
-        // giá trị bắt đầu của pagination
-        int begin = (page - 1) * recordsPerPage;
+        // nếu pageParams khác null thì set lại
+        if(priceParams != null) price = Integer.parseInt(priceParams);
 
-        // nếu giá trị genderParams khác null thì set lại giá trị và list shoes return
-        if(genderParams != null) {
-            gender = Integer.parseInt(genderParams);
-            listShoes = ShoesDAO.getListShoesByGender(gender);
+        // nếu pageParams khác null thì set lại
+        if(sizeParams != null) size = Integer.parseInt(sizeParams);
+
+        // nếu pageParams khác null thì set lại
+        if(genderParams != null) gender = Integer.parseInt(genderParams);
+
+        // nếu pageParams khác null thì set lại
+        if(sortParams != null) sort = sortParams;
+
+
+        listShoes = ShoesDAO.getListShoes(category, price, size, gender, sort);
+
+        String ajaxParams = req.getParameter("ajax");
+        if(ajaxParams == null) {
+
+            // return
+            req.setAttribute("listShoes", listShoes);
+            req.getRequestDispatcher("/views/shop.jsp").forward(req, res);
+            return;
         }
 
-        // nếu category khác null thì set lại giá trị và list shoes return
-        if(categoryParams != null) {
-            category = Integer.parseInt(categoryParams);
-            listShoes = ShoesDAO.getListShoesByCategoryAndGender(category, gender, begin, recordsPerPage);
-        }
+        // set giá trị trả về là json
+        res.setContentType("application/json");
 
-//        int noOfRecords = listShoes.size() + 1;
-//        int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
+        // set return json
+        Gson gson = new Gson();
+        System.out.println("response");
 
-        // return
-        req.setAttribute("listShoes", listShoes);
-        req.getRequestDispatcher("/views/shop.jsp").forward(req, res);
+        // return ra list json
+        PrintWriter pw = res.getWriter();
+        pw.println(gson.toJson(listShoes));
     }
 }
