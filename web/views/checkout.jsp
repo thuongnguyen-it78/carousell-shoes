@@ -29,8 +29,8 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
                         <div class="breadcrumb__links">
-                            <a href="/index.html">Home</a>
-                            <a href="/shop.html">Shop</a>
+                            <a href="/">Home</a>
+                            <a href="/product-list">Shop</a>
                             <span>Check Out</span>
                         </div>
                     </div>

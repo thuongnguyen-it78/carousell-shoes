@@ -16,7 +16,7 @@
 <body>  
     <!-- Fixed -->
     <a href="#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-    <a href="/shopping-cart.html" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>0</span></a>
+    <a href="/me/cart" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>0</span></a>
 
     <!-- Page Preloder -->
     <div id="preloder">

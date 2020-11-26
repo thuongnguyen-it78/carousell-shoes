@@ -12,18 +12,18 @@
 
 
             <div class="search-auto-list">
-                <a class="search-auto-item">
-                    <img class = "search-item-cus" src="/resources/img/shop/7.jpg" alt="">
-                    <span class = "search-text-cus">HOODED THERMAL ANORAK</span>
-                </a>
-                <a class="search-auto-item">
-                    <img class = "search-item-cus" src="/resources/img/shop/7.jpg" alt="">
-                    <span class = "search-text-cus">HOODED THERMAL ANORAK</span>
-                </a>
-                <a class="search-auto-item">
-                    <img class = "search-item-cus" src="/resources/img/shop/7.jpg" alt="">
-                    <span class = "search-text-cus">HOODED THERMAL ANORAK</span>
-                </a>
+<%--                <a class="search-auto-item">--%>
+<%--                    <img class = "search-item-cus" src="/resources/img/shop/7.jpg" alt="">--%>
+<%--                    <span class = "search-text-cus">HOODED THERMAL ANORAK</span>--%>
+<%--                </a>--%>
+<%--                <a class="search-auto-item">--%>
+<%--                    <img class = "search-item-cus" src="/resources/img/shop/7.jpg" alt="">--%>
+<%--                    <span class = "search-text-cus">HOODED THERMAL ANORAK</span>--%>
+<%--                </a>--%>
+<%--                <a class="search-auto-item">--%>
+<%--                    <img class = "search-item-cus" src="/resources/img/shop/7.jpg" alt="">--%>
+<%--                    <span class = "search-text-cus">HOODED THERMAL ANORAK</span>--%>
+<%--                </a>--%>
             </div>
 
         </form>

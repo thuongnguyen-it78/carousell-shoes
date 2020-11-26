@@ -1,5 +1,7 @@
 <%@ page import="thuongnguyen.it78.models.Account" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.HashMap" %>
+
 
 <!-- Page Preloder -->
 <div id="preloder">
@@ -143,7 +145,20 @@
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><img src="/resources/img/icon/search.png" alt=""></a>
                     <a href="/contact-us"><img src="/resources/img/icon/heart.png" alt=""></a>
-                    <a href="/me/cart"><img src="/resources/img/icon/cart.png" alt=""><span>0</span></a>
+                    <a href="/me/cart"><img src="/resources/img/icon/cart.png" alt=""><span>
+                        <%
+                            if(request.getSession().getAttribute("cart") != null)  {
+                                HashMap mapCartSize1 = (HashMap) request.getSession().getAttribute("cart");
+                        %>
+                                 <%=mapCartSize1.size()%>
+                        <%
+                        } else {
+                        %>
+                        0
+                        <%
+                            }
+                        %>
+                    </span></a>
                 </div>
             </div>
         </div>

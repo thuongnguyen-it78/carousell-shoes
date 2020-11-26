@@ -1,5 +1,6 @@
 <%@ page import="thuongnguyen.it78.models.Shoes" %>
 <%@ page import="thuongnguyen.it78.configs.LibraryMethod" %>
+<%@ page import="java.util.HashMap" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +32,11 @@
 <body>
      <!-- Fixed -->
      <a href="#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-     <a href="/shopping-cart.html" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>0</span></a>
-     <div class="noti noti--success noti-hidden">
+     <a href="/me/cart" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>
+
+        <%HashMap mapCartSize = (HashMap) request.getSession().getAttribute("cart");%>
+        <%=mapCartSize.size()%>
+    </span></a>     <div class="noti noti--success noti-hidden">
          <i class="fal fa-bell icon"></i>
          <p class="desc">Sản phẩm đã được thêm vào giỏ hàng!<br><strong><a href="/me/cart"> Xem giỏ hàng</a></strong></p>
          <i class="fal fa-times close"></i>

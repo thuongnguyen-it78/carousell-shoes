@@ -1,3 +1,4 @@
+<%@ page import="java.util.HashMap" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +17,11 @@
 <body>
     <!-- Fixed -->
     <a href="#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-    <a href="/shopping-cart.html" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>0</span></a>
+    <a href="/me/cart" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>
 
+        <%HashMap mapCartSize = (HashMap) request.getSession().getAttribute("cart");%>
+        <%=mapCartSize.size()%>
+    </span></a>
     <%@include file="partials/header.jsp" %>
 
 <!-- MAIN SECTION BEGIN -->

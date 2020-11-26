@@ -190,16 +190,37 @@ function renderFilter(response) {
                                     <span class="label">Sale</span>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>${getName(shoes.shoesName)}</h6>
+                                    <h6>${capitalize(getName(shoes.shoesName).toLowerCase())}</h6>
                                     <a href="/product-detail/${shoes.shoesID}" class="add-cart">MUA NGAY</a>
-                                    <p>${shoes.shoesColor}</p>
-                                    <h5>${shoes.shoesPrice} VND</h5>
+                                    <p>${capitalize(shoes.shoesColor.toLowerCase())}</p>
+                                    <h5>${formatNumber(shoes.shoesPrice)} VND</h5>
                                 </div>
                             </div>
                         </div>`
     }
     console.log(html)
 
-    containerShoes.innerHTML =  html;
+    containerShoes.innerHTML = html;
 
 }
+
+function formatNumber(number) {
+    return  number.toFixed(0).replace(/./g, function(c, i, a) {
+        return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "." + c : c;
+    });
+}
+const capitalize = (s) => {
+    if (typeof s !== 'string') return ''
+    return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
+$(document).ready(function(){
+    let selector = '.shop__sidebar__categories a, .shop__sidebar__price a, .shop__sidebar__tags a'
+    let item = document.querySelectorAll(selector);
+
+    for(let a of item) {
+        a.addEventListener('click', (e) => {
+            e.preventDefault()
+        })
+    }
+})

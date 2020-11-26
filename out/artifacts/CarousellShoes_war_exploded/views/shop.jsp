@@ -21,10 +21,10 @@
 <body>
     <!-- Fixed -->
     <a href="#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
-    <a href="/shopping-cart.html" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>
+    <a href="/me/cart" class="shopping-cart-fixed"><i class="fal fa-shopping-bag"></i><span>
 
-        <%HashMap mapCart = (HashMap) request.getSession().getAttribute("cart");%>
-        <%=mapCart.size()%>
+        <%HashMap mapCartSize = (HashMap) request.getSession().getAttribute("cart");%>
+        <%=mapCartSize.size()%>
     </span></a>
 
 
@@ -38,7 +38,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
                         <div class="breadcrumb__links">
-                            <a href="/index.html">Home</a>
+                            <a href="/">Home</a>
                             <span>Shop</span>
                         </div>
                     </div>
