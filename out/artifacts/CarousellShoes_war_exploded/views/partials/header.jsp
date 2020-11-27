@@ -117,7 +117,7 @@
                     <ul>
                         <li class="active"><a href="/product-list">SẢN PHẨM</a></li>
                         <li><a href="/product-list?gender=1">GIÀY NAM</a></li>
-                        <li><a href="/product-listgender=2">GIÀY NỮ</a></li>
+                        <li><a href="/product-list?gender=2">GIÀY NỮ</a></li>
                         <li><a href="/product-list">DANH MỤC</a>
                             <ul class="dropdown">
                                 <li><a href="/product-list?category=1">BASAS</a></li>
@@ -134,8 +134,6 @@
                                 <li><a href="/product-list">BEST SELLER</a></li>
                                 <li><a href="/product-list">NEW PRODUCT</a></li>
                                 <li><a href="/product-list">HOT SALES</a></li>
-
-
                             </ul>
                         </li>
                     </ul>
